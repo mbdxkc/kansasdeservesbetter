@@ -1,0 +1,7 @@
+# GitHub Pages publishes every file in the repo unless it is listed here.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - devLog.md
+  - LICENSE
+  - tools
