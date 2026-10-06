@@ -7,8 +7,8 @@
   kansasdeservesbetter.com
   ============================================================================
   @file       index.html
-  @desc       One-page summary of Sen. Roger Marshall's record and the Kansas
-              voting dates, linking to the full sourced record.
+  @desc       The public record of Sen. Roger Marshall, sourced line by line,
+              and how Kansans vote on Nov. 3, 2026.
   @author     mediaBrilliance digitalxtudio
   @version    0.1.0
   @updated    2026-10-05
@@ -19,25 +19,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Roger Marshall Sued 700+ Patients | Kansas Deserves Better</title>
-  <meta name="description" content="Sen. Roger Marshall's practice sued 700+ patients and 81 were arrested after missing court dates. His votes, and how Kansans vote on Nov. 3." />
+  <meta name="description" content="Sen. Roger Marshall's medical practice sued 700+ patients and 81 were arrested. His votes, his words, his donors, every claim sourced. Kansas votes Nov. 3." />
   <link rel="canonical" href="https://kansasdeservesbetter.com/" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="author" content="mediaBrilliance" />
   <meta name="theme-color" content="#0b0b0b" />
 
   <meta property="og:site_name" content="Kansas Deserves Better" />
-  <meta property="og:title" content="Kansas Deserves Better" />
-  <meta property="og:description" content="Roger Marshall's practice sued 700+ patients. 81 were arrested after missing court dates. Kansas votes Nov. 3." />
-  <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Kansas Deserves Better" />
+  <meta property="og:description" content="Roger Marshall's practice sued 700+ patients. 81 were arrested after missing court dates. Every claim sourced. Kansas votes Nov. 3." />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content="https://kansasdeservesbetter.com/" />
   <meta property="og:image" content="https://kansasdeservesbetter.com/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Kansas Deserves Better. Roger Marshall's practice sued 700+ patients. 81 were arrested." />
+  <meta property="article:published_time" content="2026-10-05" />
+  <meta property="article:modified_time" content="2026-10-05" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kansas Deserves Better" />
-  <meta name="twitter:description" content="Roger Marshall's practice sued 700+ patients. 81 were arrested after missing court dates. Kansas votes Nov. 3." />
+  <meta name="twitter:description" content="Roger Marshall's practice sued 700+ patients. 81 were arrested after missing court dates. Every claim sourced. Kansas votes Nov. 3." />
   <meta name="twitter:image" content="https://kansasdeservesbetter.com/og.png" />
   <meta name="twitter:image:alt" content="Kansas Deserves Better. Roger Marshall's practice sued 700+ patients. 81 were arrested." />
 
@@ -49,6 +51,12 @@
  "@context": "https://schema.org",
  "@graph": [
   {
+   "@type": "Organization",
+   "@id": "https://www.mediabrilliance.io/#org",
+   "name": "mediaBrilliance",
+   "url": "https://www.mediabrilliance.io/"
+  },
+  {
    "@type": "WebSite",
    "@id": "https://kansasdeservesbetter.com/#site",
    "url": "https://kansasdeservesbetter.com/",
@@ -57,12 +65,6 @@
    "publisher": {
     "@id": "https://www.mediabrilliance.io/#org"
    }
-  },
-  {
-   "@type": "Organization",
-   "@id": "https://www.mediabrilliance.io/#org",
-   "name": "mediaBrilliance",
-   "url": "https://www.mediabrilliance.io/"
   },
   {
    "@type": "Person",
@@ -80,26 +82,33 @@
    ]
   },
   {
-   "@type": "WebPage",
-   "@id": "https://kansasdeservesbetter.com/#page",
-   "url": "https://kansasdeservesbetter.com/",
-   "name": "Roger Marshall Sued 700+ Patients | Kansas Deserves Better",
-   "description": "Sen. Roger Marshall's practice sued 700+ patients and 81 were arrested after missing court dates. His votes, and how Kansans vote on Nov. 3.",
+   "@type": "Article",
+   "@id": "https://kansasdeservesbetter.com/#record",
+   "mainEntityOfPage": "https://kansasdeservesbetter.com/",
    "isPartOf": {
     "@id": "https://kansasdeservesbetter.com/#site"
+   },
+   "headline": "Roger Marshall sued his own patients. Then he ran for Senate.",
+   "description": "Sen. Roger Marshall's medical practice sued 700+ patients and 81 were arrested. His votes, his words, his donors, every claim sourced. Kansas votes Nov. 3.",
+   "image": "https://kansasdeservesbetter.com/og.png",
+   "inLanguage": "en-US",
+   "datePublished": "2026-10-05",
+   "dateModified": "2026-10-05",
+   "author": {
+    "@id": "https://www.mediabrilliance.io/#org"
+   },
+   "publisher": {
+    "@id": "https://www.mediabrilliance.io/#org"
    },
    "about": {
     "@id": "https://kansasdeservesbetter.com/#marshall"
    },
-   "inLanguage": "en-US",
-   "datePublished": "2026-10-05",
-   "dateModified": "2026-10-05",
-   "primaryImageOfPage": "https://kansasdeservesbetter.com/og.png",
-   "keywords": "Roger Marshall, Roger Marshall medical debt, Roger Marshall sued patients, Roger Marshall voting record, Kansas Senate race 2026, Adam Hamilton, Kansas voter registration deadline, Kansas early voting",
+   "keywords": "Roger Marshall, Roger Marshall medical debt, Roger Marshall sued patients, Roger Marshall voting record, Kansas Senate 2026, Adam Hamilton, Kansas voter registration",
    "citation": [
     "https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html",
-    "https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills",
+    "https://www.fec.gov/data/committee/C00576173/?cycle=2026",
     "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm",
+    "https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills",
     "https://sos.ks.gov/elections/important-election-dates.html"
    ]
   },
@@ -112,47 +121,47 @@
      "name": "Did Roger Marshall sue his patients?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. Court records show Marshall and his Great Bend OB-GYN practice sued more than 700 patients over unpaid bills from 1998 to 2019, some for as little as $101, at 18 percent interest."
+      "text": "Yes. Marshall and his Great Bend OB-GYN practice filed debt-collection lawsuits against more than 700 patients from 1998 to 2019, over balances as small as $101, at 18 percent annual interest."
      }
     },
     {
      "@type": "Question",
-     "name": "Were Roger Marshall's patients arrested?",
+     "name": "Why were Roger Marshall's patients arrested?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "In 81 of those cases, the patient was arrested after missing a court date. Marshall's spokesperson says judges, not doctors, issue warrants."
+      "text": "Eighty-one of the patients he sued were arrested after missing court dates in those debt cases. His spokesperson says judges, not doctors, issue the warrants."
      }
     },
     {
      "@type": "Question",
-     "name": "How has Roger Marshall voted on health care?",
+     "name": "How did Roger Marshall vote on health care?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "He voted for the 2025 megabill and its Medicaid cuts, against a $35 insulin cap for privately insured patients in 2022 and against extending ACA premium tax credits in 2025."
+      "text": "He voted for the 2025 megabill and its Medicaid cuts, against a $35 insulin cap for private insurance in 2022, against extending ACA premium tax credits in 2025 and for the 2017 House bill to repeal the ACA."
      }
     },
     {
      "@type": "Question",
-     "name": "Who is running against Roger Marshall in 2026?",
+     "name": "Does Roger Marshall live in Kansas?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Democrat Adam Hamilton, a United Methodist pastor. Kansas votes Nov. 3, 2026."
+      "text": "He lists a cabin near St. John, appraised at $124,200, as his home. A trust bought a Sarasota, Fla., house in 2019 that was later valued at $1.2 million."
      }
     },
     {
      "@type": "Question",
-     "name": "When is the voter registration deadline in Kansas?",
+     "name": "Who is running against Roger Marshall?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Oct. 13, 2026, for the Nov. 3 general election. You can register online with a Kansas driver's license or state ID."
+      "text": "Democrat Adam Hamilton, a United Methodist pastor. The general election is Nov. 3, 2026."
      }
     },
     {
      "@type": "Question",
-     "name": "When does early voting start in Kansas?",
+     "name": "When is the Kansas voter registration deadline?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "In-person advance voting can start Oct. 14 and ends at noon Nov. 2. Days and hours vary by county."
+      "text": "Oct. 13, 2026, for the Nov. 3 general election. Advance voting starts as early as Oct. 14."
      }
     }
    ]
@@ -170,7 +179,8 @@
       <nav class="nav" aria-label="Sections">
         <a href="#patients">Patients</a>
         <a href="#votes">Votes</a>
-        <a href="#faq">Answers</a>
+        <a href="#words">Words</a>
+        <a href="#money">Money</a>
         <a class="vote" href="#vote">Vote Nov. 3</a>
       </nav>
     </div>
@@ -181,93 +191,413 @@
       <div class="wrap">
         <p class="kicker">Kansas &middot; U.S. Senate &middot; Nov. 3, 2026</p>
         <h1>Roger Marshall sued his own patients. <em>Then he ran for Senate.</em></h1>
-        <p class="lede">Before Congress, Marshall delivered babies in Great Bend. His medical practice
-        took more than 700 patients to court over unpaid bills. Eighty-one of them were arrested
-        after missing court dates.</p>
+        <p class="lede">Roger Marshall's medical practice took more than 700 patients to court
+        over unpaid bills. Eighty-one of them were arrested after missing court dates. This is his record, in
+        his votes, his words and his donors, with a source on every line.</p>
+        <p class="src cite">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times, Sept. 8, 2026</a>, from Kansas court records.</p>
         <a class="cta" href="#vote">Make a plan to vote</a>
+      </div>
+    </section>
+
+    <aside class="strip" aria-label="Key voting dates">
+      <div class="wrap">
+        <p><span><b>Register</b> by Oct. 13</span>
+          <span><b>Vote early</b> Oct. 14 to Nov. 2</span>
+          <span><b>Election Day</b> Nov. 3</span>
+          <a href="#vote">How to vote &rarr;</a></p>
+      </div>
+    </aside>
+
+    <section class="section reel-section" id="reel" aria-labelledby="reel-h">
+      <div class="wrap">
+        <h2 id="reel-h">Roger Marshall, in 18 slides</h2>
+        <div class="reel" role="region" aria-roledescription="carousel" aria-label="Roger Marshall, in 18 slides">
+          <div class="reel-track" tabindex="0">
+          <div class="slide slide-photo" role="group" aria-roledescription="slide" aria-label="1 of 18">
+            <img src="images/marshall-portrait-640.webp" srcset="images/marshall-portrait-640.webp 640w, images/marshall-portrait-1200.webp 1200w"
+                 sizes="(min-width: 900px) 34rem, 88vw" width="1200" height="800" loading="lazy" decoding="async" alt="Official portrait of Sen. Roger Marshall" />
+            <p class="slide-text">Sen. Roger Marshall delivered babies in Great Bend for more than 25 years. His practice took more than 700 of those patients to court.</p>
+            <p class="src">Sources: <a href="https://www.marshall.senate.gov/about/">his Senate biography</a>; <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a> &middot; Photo: <a href="https://commons.wikimedia.org/wiki/File:Roger_Marshall_117th_Congress_portrait.jpg">U.S. Senate Photographic Studio, 2021</a>, public domain</p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="2 of 18">
+            <blockquote>&ldquo;Those were common, common business practices.&rdquo;</blockquote>
+            <p class="slide-who">Roger Marshall, as the crowd chanted &ldquo;Shame on you!&rdquo; at the Kansas State Fair debate, Sept. 12, 2026</p>
+            <p class="src">Source: <a href="https://www.mediaite.com/media/news/watch-gop-senator-gets-pelted-with-boos-over-trumps-tariffs/">Mediaite</a></p>
+          </div>
+          <div class="slide slide-stat slide-multi" role="group" aria-roledescription="slide" aria-label="3 of 18">
+            <dl class="sum">
+              <div><dt>81</dt><dd>patients arrested after missing court dates in his debt cases</dd></div>
+              <div><dt>$101</dt><dd>the smallest balance taken to court</dd></div>
+              <div><dt>18%</dt><dd>annual interest; his own lawyer says Marshall set the rate</dd></div>
+            </dl>
+            <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, from Kansas court records; <a href="https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills">Medical Economics</a></p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="4 of 18">
+            <blockquote>&ldquo;The second time I was arrested I was eight months pregnant with my son.&rdquo;</blockquote>
+            <p class="slide-who">Meischa Zimmerman, sued by Marshall's practice</p>
+            <p class="src">Source: <a href="https://www.kwch.com/2026/09/10/report-claims-sen-roger-marshall-sued-kansas-patients-over-medical-debt/">KWCH 12 News, Sept. 10, 2026</a></p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="5 of 18">
+            <blockquote>&ldquo;For me and my twins (who I lost).&rdquo;</blockquote>
+            <blockquote>&ldquo;Two said that the bills Mr. Marshall pursued in court stemmed from late miscarriages that required surgery.&rdquo;</blockquote>
+            <p class="slide-who">A patient sued for $1,200 in 2004 asked not to be held liable for that care; she was still found responsible. Then the Times, on the patients it interviewed.</p>
+            <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, as quoted by <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a></p>
+          </div>
+          <div class="slide slide-photo" role="group" aria-roledescription="slide" aria-label="6 of 18">
+            <img src="images/marshall-hearing-640.webp" srcset="images/marshall-hearing-640.webp 640w, images/marshall-hearing-1200.webp 1200w"
+                 sizes="(min-width: 900px) 34rem, 88vw" width="1200" height="800" loading="lazy" decoding="async" alt="Sen. Roger Marshall at a Senate Agriculture Committee hearing, behind his nameplate" />
+            <p class="slide-text">In July 2025 he voted for the megabill the Congressional Budget Office says leaves 10 million more Americans uninsured by 2034. The day before, he voted no on a motion on rural hospitals. It failed 49-51.</p>
+            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm">roll call 372</a>; <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00333.htm">roll call 333</a> &middot; Photo: <a href="https://commons.wikimedia.org/wiki/File:Brooke_Rollins_and_the_Senate_Agriculture,_Nutrition,_and_Forestry_Committee_hearing_on_her_nomination_for_Secretary_of_Agriculture_on_January_23,_2025_in_Washington,_D.C._-_26.jpg">USDA, Tom Witham, Jan. 23, 2025</a>, public domain</p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="7 of 18">
+            <blockquote>&ldquo;Just like Jesus said, &lsquo;The poor will always be with us.&rsquo; There is a group of people that just don&rsquo;t want health care.&rdquo;</blockquote>
+            <p class="slide-who">Roger Marshall on Medicaid expansion, March 2017. He later said he regretted the answer.</p>
+            <p class="src">Source: <a href="https://www.statnews.com/2017/03/10/roger-marshall-poor-medicaid-obamacare-comments/">STAT</a></p>
+          </div>
+          <div class="slide slide-stat" role="group" aria-roledescription="slide" aria-label="8 of 18">
+            <b>$35</b>
+            <p class="slide-who">A monthly cap on insulin for people with private insurance. Marshall voted no. Aug. 7, 2022.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00314.htm">Senate roll call 314</a></p>
+          </div>
+          <div class="slide slide-photo" role="group" aria-roledescription="slide" aria-label="9 of 18">
+            <img src="images/marshall-pin-640.webp" srcset="images/marshall-pin-640.webp 640w, images/marshall-pin-1200.webp 1200w"
+                 sizes="(min-width: 900px) 34rem, 88vw" width="1200" height="800" loading="lazy" decoding="async" alt="Sen. Roger Marshall shows a pin to Brooke Rollins before a Senate Agriculture Committee hearing" />
+            <p class="slide-text">He voted no on extending the ACA premium tax credits. They expired Dec. 31, 2025.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00644.htm">Senate roll call 644</a> &middot; Photo: <a href="https://commons.wikimedia.org/wiki/File:Brooke_Rollins_and_the_Senate_Agriculture,_Nutrition,_and_Forestry_Committee_hearing_on_her_nomination_for_Secretary_of_Agriculture_on_January_23,_2025_in_Washington,_D.C._-_45.jpg">USDA, Jan. 23, 2025</a>, public domain</p>
+          </div>
+          <div class="slide slide-stat" role="group" aria-roledescription="slide" aria-label="10 of 18">
+            <b>OB-GYN</b>
+            <p class="slide-who">A doctor who delivered 5,000 babies voted against even opening debate on the Right to IVF Act. June 13, 2024.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00197.htm">Senate roll call 197</a>; <a href="https://www.marshall.senate.gov/about/">his Senate biography</a></p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="11 of 18">
+            <blockquote>&ldquo;Can confirm.&rdquo;</blockquote>
+            <p class="slide-who">Roger Marshall, sharing a post that called the Kansans at his Oakley town hall &ldquo;paid troublemakers,&rdquo; March 2025. Days later: &ldquo;I don&rsquo;t have firsthand evidence.&rdquo;</p>
+            <p class="src">Source: <a href="https://www.hppr.org/hppr-news/2025-03-07/roger-marshall-called-them-paid-democratic-operatives-they-say-theyre-just-concerned-kansans">High Plains Public Radio</a></p>
+          </div>
+          <div class="slide slide-stat" role="group" aria-roledescription="slide" aria-label="12 of 18">
+            <b>9:58 p.m.</b>
+            <p class="slide-who">Jan. 6, 2021. Hours after the Capitol riot, Marshall voted to throw out Arizona&rsquo;s electors.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00001.htm">Senate roll call 1</a></p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="13 of 18">
+            <blockquote>&ldquo;This is corporate censorship, pure and simple.&rdquo;</blockquote>
+            <p class="slide-who">Roger Marshall, after Facebook removed his debunked COVID death-count post, September 2020</p>
+            <p class="src">Source: <a href="https://www.wibw.com/2020/09/01/facebook-removes-roger-marshall-covid-19-post/">WIBW</a></p>
+          </div>
+          <div class="slide slide-stat" role="group" aria-roledescription="slide" aria-label="14 of 18">
+            <b>$8.2M</b>
+            <p class="slide-who">in TV time a Washington super PAC reserved to keep him in office</p>
+            <p class="src">Source: <a href="https://hayspost.com/posts/d95db666-6897-4761-86a9-b6f3320c6139">Associated Press, Oct. 3, 2026</a></p>
+          </div>
+          <div class="slide slide-photo" role="group" aria-roledescription="slide" aria-label="15 of 18">
+            <img src="images/marshall-pin-2-640.webp" srcset="images/marshall-pin-2-640.webp 640w, images/marshall-pin-2-1200.webp 1200w"
+                 sizes="(min-width: 900px) 34rem, 88vw" width="1200" height="800" loading="lazy" decoding="async" alt="Sen. Roger Marshall with Brooke Rollins before a Senate Agriculture Committee hearing" />
+            <p class="slide-text">Over his Senate term, PACs and committees gave his campaign $2,507,970, more than individual donors&rsquo; $2,503,737. This cycle, 82% of his itemized individual donations came from outside Kansas.</p>
+            <p class="src">Source: <a href="https://www.fec.gov/data/committee/C00576173/?cycle=2026">FEC, through July 15, 2026</a> &middot; Photo: <a href="https://commons.wikimedia.org/wiki/File:Brooke_Rollins_and_the_Senate_Agriculture,_Nutrition,_and_Forestry_Committee_hearing_on_her_nomination_for_Secretary_of_Agriculture_on_January_23,_2025_in_Washington,_D.C._-_46.jpg">USDA, Jan. 23, 2025</a>, public domain</p>
+          </div>
+          <div class="slide slide-stat" role="group" aria-roledescription="slide" aria-label="16 of 18">
+            <b>17 months</b>
+            <p class="slide-who">late disclosing stock trades made for one of his dependent children. The law allows 45 days.</p>
+            <p class="src">Source: <a href="https://www.yahoo.com/news/64-members-congress-violated-law-125839548.html">Business Insider</a></p>
+          </div>
+          <div class="slide slide-photo" role="group" aria-roledescription="slide" aria-label="17 of 18">
+            <img src="images/marshall-capitol-640.webp" srcset="images/marshall-capitol-640.webp 640w, images/marshall-capitol-1200.webp 1200w"
+                 sizes="(min-width: 900px) 34rem, 88vw" width="1200" height="800" loading="lazy" decoding="async" alt="Official photo of Sen. Roger Marshall in the U.S. Capitol" />
+            <p class="slide-text">He lists a cabin near St. John, appraised at $124,200, as home. A trust bought a Sarasota, Fla., house in 2019, later valued at $1.2 million. At the State Fair debate:</p>
+            <blockquote class="slide-bq">&ldquo;You&rsquo;ll be glad to know it was struck by two hurricanes and has been uninhabitable for two years.&rdquo;</blockquote>
+            <p class="src">Sources: <a href="https://www.aol.com/roger-marshall-calls-kansas-cabin-160558785.html">Topeka Capital-Journal</a>; <a href="https://www.yahoo.com/news/politics/articles/u-sen-roger-marshall-leaves-130152437.html">Sept. 18, 2026</a> &middot; Photo: <a href="https://commons.wikimedia.org/wiki/File:Senator_Roger_Marshall_official_photo.jpg">U.S. Senate Photography Office</a>, public domain</p>
+          </div>
+          <div class="slide slide-quote" role="group" aria-roledescription="slide" aria-label="18 of 18">
+            <blockquote>&ldquo;Judges issue warrants when people repeatedly miss court dates, not Doctors.&rdquo;</blockquote>
+            <blockquote>&ldquo;Sixty days before an election, the New York Times has decided that a rural doctor keeping the hospital&rsquo;s lights on is some kind of scandal.&rdquo;</blockquote>
+            <p class="slide-who">Payton Fuller, Marshall&rsquo;s spokesperson. Kansans vote Nov. 3.</p>
+            <p class="src">Source: <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a></p>
+          </div>
+          </div>
+          <div class="reel-nav" hidden>
+            <button type="button" class="reel-btn reel-play" aria-pressed="false" aria-label="Pause slides">Pause</button>
+            <button type="button" class="reel-btn" data-dir="-1" aria-label="Previous slide">&larr;</button>
+            <span class="reel-count">1 / 18</span>
+            <button type="button" class="reel-btn" data-dir="1" aria-label="Next slide">&rarr;</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="patients" aria-labelledby="patients-h">
       <div class="wrap">
-        <h2 id="patients-h">The patients Roger Marshall sued</h2>
-        <div class="stats">
-          <div class="stat"><b>700+</b><span>patients sued by Marshall and his practice, 1998&#8209;2019</span></div>
-          <div class="stat"><b>81</b><span>arrested after missing court dates in those cases</span></div>
-          <div class="stat"><b>$101</b><span>the smallest debt taken to court</span></div>
-          <div class="stat"><b>18%</b><span>annual interest on patient balances</span></div>
-        </div>
-        <p class="src stats-src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, from Kansas court records; <a href="https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills">Medical Economics</a>.</p>
-      </div>
-    </section>
+        <h2 id="patients-h">The patients</h2>
+        <p class="section-intro">Before Congress, Marshall delivered babies in Great Bend. A New York
+        Times review of Kansas court records found what his practice did when patients could not pay.</p>
 
-    <section class="section" id="votes" aria-labelledby="votes-h">
-      <div class="wrap">
-        <h2 id="votes-h">Roger Marshall&rsquo;s votes</h2>
-        <p class="section-intro">A checkup on the doctor&rsquo;s voting record.</p>
+<div class="reel reel-cases" role="region" aria-roledescription="carousel" aria-label="Patients Marshall sued">
+          <div class="reel-track" tabindex="0">
+          <div class="slide slide-case slide-sum" role="group" aria-roledescription="slide" aria-label="1 of 9">
+            <h3>The record</h3>
+            <dl class="sum">
+              <div><dt>700+</dt><dd>patients sued by Marshall and his practice, 1998&#8209;2019</dd></div>
+              <div><dt>81</dt><dd>arrested after missing court dates in those cases</dd></div>
+              <div><dt>$101</dt><dd>the smallest debt taken to court</dd></div>
+              <div><dt>18%</dt><dd>annual interest on patient balances</dd></div>
+            </dl>
+            <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, from Kansas court records; <a href="https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills">Medical Economics</a></p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="2 of 9">
+            <b>$3,596</b>
+            <h3>Meischa Zimmerman</h3>
+            <p>Sued over the bill for her C-section delivery. She set up a $50 monthly plan; at 18 percent interest, she was told the debt had passed $7,000. She was arrested three times after missed court dates, once while eight months pregnant.</p>
+            <blockquote>&ldquo;The second time I was arrested I was eight months pregnant with my son.&rdquo;</blockquote>
+            <p class="src">Source: <a href="https://www.thedailybeast.com/maga-senators-dark-past-hounding-his-poor-patients-exposed/">The Daily Beast</a>, reporting the Times; <a href="https://www.kwch.com/2026/09/10/report-claims-sen-roger-marshall-sued-kansas-patients-over-medical-debt/">KWCH 12 News</a></p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="3 of 9">
+            <b>$4,561</b>
+            <h3>Joe Vasquez and his wife</h3>
+            <p>Sued over the bill for her emergency hysterectomy. After the couple missed a court date, police arrested both over Easter weekend 2007 as their grandchildren got ready for an egg hunt. They spent two days in jail until their son raised bond money.</p>
+            <p class="src">Source: <a href="https://www.thedailybeast.com/maga-senators-dark-past-hounding-his-poor-patients-exposed/">The Daily Beast</a>; <a href="https://newrepublic.com/post/215156/gop-senator-marshall-sued-people-couldnt-pay-health-bills">The New Republic</a>, both reporting the Times</p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="4 of 9">
+            <b>$129</b>
+            <h3>Kellie Clutts</h3>
+            <p>Sued in 2015 over a postpartum visit, when her daughter was 9 months old. The firm garnished her bank account.</p>
+            <blockquote>&ldquo;I had every intention to pay, I was just struggling. I was recently divorced, trying to do everything on my own.&rdquo;</blockquote>
+            <p class="src">Source: <a href="https://www.thedailybeast.com/maga-senators-dark-past-hounding-his-poor-patients-exposed/">The Daily Beast</a>; <a href="https://newrepublic.com/post/215156/gop-senator-marshall-sued-people-couldnt-pay-health-bills">The New Republic</a>, both reporting the Times</p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="5 of 9">
+            <b>$1,200</b>
+            <h3>A mother of twins she lost</h3>
+            <p>Sued in 2004. She asked the court not to hold her liable for care she received &ldquo;for me and my twins (who I lost).&rdquo; She was still found responsible for the bill.</p>
+            <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, as quoted by <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a></p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="6 of 9">
+            <b>2 of 8</b>
+            <h3>Late miscarriages</h3>
+            <p>Of eight people the Times interviewed, two said the bills Marshall took to court came from late miscarriages that required surgery. Most said they lived paycheck to paycheck, choosing between medical bills and groceries.</p>
+            <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, as quoted by <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a></p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="7 of 9">
+            <b>13 more</b>
+            <h3>Warrants requested</h3>
+            <p>Beyond the 81 arrests, Marshall&rsquo;s lawyers sought warrants in 13 other cases. The records do not show whether those patients were arrested.</p>
+            <p class="src">Source: <a href="https://www.thedailybeast.com/maga-senators-dark-past-hounding-his-poor-patients-exposed/">The Daily Beast</a>; <a href="https://hoodline.com/2026/09/kansas-court-records-detail-medical-debt-lawsuits-linked-to-roger-marshall-s-former-practice/">Hoodline</a>, both reporting the Times</p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="8 of 9">
+            <b>2017-2021</b>
+            <h3>After he went to Washington</h3>
+            <p>Marshall stopped practicing when he won his House seat in 2016. The collection cases kept going while he served in Congress.</p>
+            <p class="src">Source: <a href="https://newrepublic.com/post/215156/gop-senator-marshall-sued-people-couldnt-pay-health-bills">The New Republic</a>, reporting the Times</p>
+          </div>
+          <div class="slide slide-case" role="group" aria-roledescription="slide" aria-label="9 of 9">
+            <b>&ldquo;No business&rdquo;</b>
+            <h3>His lawyer, Steven Johnson</h3>
+            <p>Johnson, who often represented Marshall in the debt cases, defended the warrants and arrests to the Times. He says Marshall did not decide on warrants or garnishments, but did set the 18 percent rate.</p>
+            <blockquote>&ldquo;If defendants were allowed to appear only when they wanted to without any consequences, the court would get no business done.&rdquo;</blockquote>
+            <p class="src">Source: <a href="https://www.kansan.com/news/sen-marshall-s-medical-practice-sued-over-700-patients-for-unpaid-medical-bills/article_32b22b28-e74c-4a63-92a2-f6889b0eb0b7.html">The University Daily Kansan</a>; <a href="https://www.thedailybeast.com/maga-senators-dark-past-hounding-his-poor-patients-exposed/">The Daily Beast</a></p>
+          </div>
+          </div>
+          <div class="reel-nav" hidden>
+            <button type="button" class="reel-btn" data-dir="-1" aria-label="Previous case">&larr;</button>
+            <span class="reel-count">1 / 9</span>
+            <button type="button" class="reel-btn" data-dir="1" aria-label="Next case">&rarr;</button>
+          </div>
+        </div>
+
         <ul class="items">
           <li class="item">
-            <h3>Voted for the Medicaid cuts</h3>
-            <p class="when">July 1, 2025 &middot; H.R. 1 &middot; Senate roll call 372</p>
-            <p>The Congressional Budget Office projects about $1 trillion less federal spending on Medicaid and ACA marketplaces, plus 10 million more uninsured Americans by 2034.</p>
-            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm">Senate roll call 372</a>; <a href="https://www.aha.org/news/headline/2025-07-21-cbo-projects-obbba-increase-uninsured-10-million-federal-deficit-34-trillion">American Hospital Association on the CBO estimate</a></p>
+            <h3>He set the 18 percent</h3>
+            <p class="when">Great Bend, 1998-2019</p>
+            <p>About half the suits were filed in Marshall's own name, the rest under Heartland Regional OBGYN, which he owned outright until 2012 and co-owned through 2019. His own lawyer says Marshall set the 18 percent rate in the contract patients signed. Collection work continued while he served in Congress.</p>
+            <p class="src">Sources: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times, Sept. 8, 2026</a>; <a href="https://www.medicaleconomics.com/view/sen-roger-marshall-s-obstetrics-practice-sued-more-than-700-patients-over-unpaid-bills">Medical Economics, Sept. 10, 2026</a></p>
           </li>
           <li class="item">
-            <h3>Against a $35 insulin cap</h3>
-            <p class="when">Aug. 7, 2022 &middot; Senate roll call 314</p>
-            <p>A $35 monthly cap on insulin for people with private insurance won 57 votes but needed 60. Marshall voted no.</p>
-            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00314.htm">Senate roll call 314</a></p>
-          </li>
-          <li class="item">
-            <h3>Let your premium help expire</h3>
-            <p class="when">Dec. 11, 2025 &middot; Senate roll call 644</p>
-            <p>A three-year extension of the ACA premium tax credits got 51 votes, short of the 60 it needed. Marshall voted no. The credits expired Dec. 31, 2025.</p>
-            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00644.htm">Senate roll call 644</a></p>
+            <h3>His answer: blame the judges</h3>
+            <p class="when">Spokesperson Payton Fuller, September 2026</p>
+            <blockquote>&ldquo;Judges issue warrants when people repeatedly miss court dates, not Doctors.&rdquo;</blockquote><blockquote>&ldquo;Sixty days before an election, the New York Times has decided that a rural doctor keeping the hospital&rsquo;s lights on is some kind of scandal.&rdquo;</blockquote><p>Then his lawyers demanded his opponent pull a TV ad in which a former patient tells her story.</p>
+            <p class="src">Sources: <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a>; <a href="https://www.kwch.com/2026/09/10/report-claims-sen-roger-marshall-sued-kansas-patients-over-medical-debt/">KWCH 12 News</a>; <a href="https://www.kwch.com/2026/09/30/marshall-sends-cease-and-desist-letter-response-hamilton-campaign-ad-over-former-patients-medical-debt/">KWCH, Sept. 30, 2026</a></p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="through" aria-labelledby="through-h">
+    <section class="section" id="votes" aria-labelledby="votes-h">
       <div class="wrap">
-        <h2 id="through-h" class="sr-only">The full record</h2>
-        <p>The patients&rsquo; stories, the rest of his votes, his own words and who funds him, every claim linked to its source.</p>
-        <a class="cta" href="https://fuckrogermarshall.com/">See the full record &rarr;</a>
+        <h2 id="votes-h">The votes</h2>
+        <p class="section-intro">A checkup on the doctor's voting record.</p>
+        <ul class="items">
+          <li class="item">
+            <h3>Voted for the Medicaid cuts</h3>
+            <p class="when">July 1, 2025 &middot; H.R. 1 &middot; Senate roll call 372</p>
+            <p>Marshall voted yes on the 2025 megabill, which passed 50-50 on the vice president's vote. The Congressional Budget Office projects about $1 trillion less federal spending on Medicaid and ACA marketplaces, plus 10 million more uninsured Americans by 2034.</p>
+            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm">Senate roll call 372</a>; <a href="https://www.aha.org/news/headline/2025-07-21-cbo-projects-obbba-increase-uninsured-10-million-federal-deficit-34-trillion">American Hospital Association on the CBO estimate</a></p>
+          </li>
+          <li class="item">
+            <h3>Against a $35 insulin cap</h3>
+            <p class="when">Aug. 7, 2022 &middot; Amendment 5194 &middot; Senate roll call 314</p>
+            <p>A $35 monthly cap on insulin for people with private insurance won 57 votes but needed 60. Marshall voted no. The cap survived only for Medicare.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00314.htm">Senate roll call 314</a></p>
+          </li>
+          <li class="item">
+            <h3>An OB-GYN who blocked the IVF bill</h3>
+            <p class="when">June 13, 2024 &middot; S. 4445 &middot; Senate roll call 197</p>
+            <p>Marshall voted against even opening debate on the Right to IVF Act. The motion failed 48-47.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00197.htm">Senate roll call 197</a></p>
+          </li>
+          <li class="item">
+            <h3>Objected to the 2020 election, after the riot</h3>
+            <p class="when">Jan. 6-7, 2021 &middot; Senate roll calls 1 and 2</p>
+            <p>Hours after the mob left the Capitol, Marshall voted to throw out Arizona's electors at 9:58 p.m. and Pennsylvania's after midnight. Both objections failed, 6-93 and 7-92.</p>
+            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00001.htm">roll call 1</a>; <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00002.htm">roll call 2</a></p>
+          </li>
+        </ul>
+        <details class="more">
+          <summary>Show 5 more votes</summary>
+          <ul class="items">
+          <li class="item">
+            <h3>Said no to protecting rural hospitals</h3>
+            <p class="when">June 30, 2025 &middot; Markey motion on H.R. 1 &middot; Senate roll call 333</p>
+            <p>A motion to send the megabill back to committee with instructions on rural hospitals failed 49-51. Marshall, whose campaign says he kept the hospital's lights on, voted no.</p>
+            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00333.htm">Senate roll call 333</a>; <a href="https://www.dailypress.senate.gov/monday-june-30-2025/">Senate floor log, June 30, 2025</a></p>
+          </li>
+          <li class="item">
+            <h3>Let your premium help expire</h3>
+            <p class="when">Dec. 11, 2025 &middot; S. 3385 &middot; Senate roll call 644</p>
+            <p>A three-year extension of the ACA premium tax credits got 51 votes, short of the 60 it needed. Marshall voted no. The credits expired Dec. 31, 2025.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00644.htm">Senate roll call 644</a></p>
+          </li>
+          <li class="item">
+            <h3>Voted to repeal the ACA</h3>
+            <p class="when">May 4, 2017 &middot; H.R. 1628 &middot; House roll call 256</p>
+            <p>In the House, Marshall voted for the American Health Care Act, which passed 217-213. The Congressional Budget Office estimated it would leave 23 million more people uninsured by 2026.</p>
+            <p class="src">Sources: <a href="https://clerk.house.gov/Votes/2017256">House roll call 256</a>; <a href="https://www.cbo.gov/publication/52752">CBO, May 24, 2017</a></p>
+          </li>
+          <li class="item">
+            <h3>Stalled care for burn-pit veterans</h3>
+            <p class="when">July 27, 2022 &middot; S. 3373 &middot; Senate roll call 272</p>
+            <p>The PACT Act covers veterans sickened by burn pits. Marshall voted to block it, and it stalled 55-42. He voted yes six days later, when it passed 86-11.</p>
+            <p class="src">Sources: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00272.htm">roll call 272</a>; <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00280.htm">roll call 280</a></p>
+          </li>
+          <li class="item">
+            <h3>Against the infrastructure law</h3>
+            <p class="when">Aug. 10, 2021 &middot; H.R. 3684 &middot; Senate roll call 314</p>
+            <p>The bill that pays for roads, bridges and rural broadband passed 69-30. Marshall voted no.</p>
+            <p class="src">Source: <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00314.htm">Senate roll call 314</a></p>
+          </li>
+          </ul>
+        </details>
       </div>
     </section>
+    <section class="section" id="words" aria-labelledby="words-h">
+      <div class="wrap">
+        <h2 id="words-h">His words</h2>
+        <p class="section-intro">What Roger Marshall says about the people he represents, in full context.</p>
+        <ul class="items">
+          <li class="item">
+            <h3>&ldquo;Common, common business practices&rdquo;</h3>
+            <p class="when">Kansas State Fair debate, Hutchinson, Sept. 12, 2026</p>
+            <p>Asked about suing his patients, as the crowd chanted &ldquo;Shame on you!&rdquo;:</p>
+            <blockquote>&ldquo;Those were common, common business practices.&rdquo;</blockquote>
+            <p class="src">Source: <a href="https://www.mediaite.com/media/news/watch-gop-senator-gets-pelted-with-boos-over-trumps-tariffs/">Mediaite, Sept. 12, 2026</a></p>
+          </li>
+          <li class="item">
+            <h3>&ldquo;The poor will always be with us&rdquo;</h3>
+            <p class="when">STAT News, March 2017, on Medicaid expansion</p>
+            <blockquote>&ldquo;Just like Jesus said, &lsquo;The poor will always be with us.&rsquo; There is a group of people that just don&rsquo;t want health care and aren&rsquo;t going to take care of themselves.&rdquo;</blockquote><p>He later said he regretted &ldquo;trying to address several issues with a singular response.&rdquo;</p>
+            <p class="src">Sources: <a href="https://www.statnews.com/2017/03/10/roger-marshall-poor-medicaid-obamacare-comments/">STAT, March 10, 2017</a>; <a href="https://www.foxnews.com/politics/kansas-congressman-under-fire-over-poor-dont-want-health-care-comment.amp">Fox News</a></p>
+          </li>
+          <li class="item">
+            <h3>&ldquo;Can confirm&rdquo;</h3>
+            <p class="when">After his Oakley town hall, March 2025</p>
+            <p>Kansans showed up to question him. Marshall shared President Trump's post calling them &ldquo;paid troublemakers&rdquo; and added &ldquo;Can confirm.&rdquo; Days later, on the radio:</p><blockquote>&ldquo;I don&rsquo;t have firsthand evidence. But that was the rumor there.&rdquo;</blockquote>
+            <p class="src">Source: <a href="https://www.hppr.org/hppr-news/2025-03-07/roger-marshall-called-them-paid-democratic-operatives-they-say-theyre-just-concerned-kansans">High Plains Public Radio, March 7, 2025</a></p>
+          </li>
+          <li class="item">
+            <h3>The &ldquo;only 6 percent&rdquo; myth</h3>
+            <p class="when">Facebook, Aug. 30, 2020, while running for Senate</p>
+            <p>Marshall, a physician, posted that CDC data showed only 6 percent of COVID deaths were due to COVID alone. That reading of the data
+            had already been debunked. Facebook removed the post. Marshall called it &ldquo;corporate censorship, pure and simple.&rdquo;</p>
+            <p class="src">Sources: <a href="https://www.kshb.com/news/election-2020/senate-candidate-marshall-slams-facebook-virus-censorship">KSHB 41 / Associated Press</a>; <a href="https://www.wibw.com/2020/09/01/facebook-removes-roger-marshall-covid-19-post/">WIBW, Sept. 1, 2020</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section" id="money" aria-labelledby="money-h">
+      <div class="wrap">
+        <h2 id="money-h">The money</h2>
+        <p class="section-intro">Who pays for Roger Marshall, from his own filings with the Federal Election Commission.</p>
 
+        <div class="stats">
+          <div class="stat"><b>$5.4M</b><span>cash on hand as of July 15, 2026, his latest report</span></div>
+          <div class="stat"><b>18%</b><span>of his itemized individual donations this cycle came from Kansas</span></div>
+          <div class="stat"><b>$2.51M</b><span>from PACs and committees over his Senate term, more than from individual donors</span></div>
+          <div class="stat"><b>$8.2M</b><span>in TV time a Washington super PAC reserved to prop him up</span></div>
+        </div>
+        <p class="src stats-src">Sources: <a href="https://www.fec.gov/data/committee/C00576173/?cycle=2026">FEC, Kansans for Marshall</a>, Pre-Primary report through July 15, 2026; <a href="https://hayspost.com/posts/d95db666-6897-4761-86a9-b6f3320c6139">Associated Press, Oct. 3, 2026</a>.</p>
+
+        <ul class="items">
+          <li class="item">
+            <h3>Washington is buying this seat</h3>
+            <p>The Senate Leadership Fund reserved nearly $8.2 million in ads for Marshall's final month. Counting his campaign and other groups,
+            Republicans lined up about $10.8 million. Hamilton's side: about $1.15 million.</p>
+            <p class="src">Source: <a href="https://hayspost.com/posts/d95db666-6897-4761-86a9-b6f3320c6139">Associated Press via Hays Post, Oct. 3, 2026</a></p>
+          </li>
+          <li class="item">
+            <h3>PACs outgave people</h3>
+            <p>Over his Senate term through July 15, 2026, PACs and other committees gave his campaign $2,507,970. Individual donors gave $2,503,737.</p>
+            <p class="src">Source: <a href="https://www.fec.gov/data/committee/C00576173/?cycle=2026">FEC, Kansans for Marshall (C00576173)</a></p>
+          </li>
+          <li class="item">
+            <h3>Most of the big checks are not from Kansas</h3>
+            <p>Of $2.47 million in itemized individual donations this cycle, $444,498 came from Kansas: about 18 percent. Florida, Texas,
+            New York and California follow.</p>
+            <p class="src">Source: <a href="https://www.fec.gov/data/committee/C00576173/?cycle=2026&amp;tab=raising">FEC, contributions by state, 2025-26</a>. Itemized means donations over $200.</p>
+          </li>
+          <li class="item">
+            <h3>Kansas cabin, Florida bay house</h3>
+            <p>Marshall sold his Great Bend home 10 days after joining the Senate and lists a cabin near St. John, appraised at $124,200, as home.
+            A trust bought a Sarasota, Fla., house in 2019 for $750,000; it was later valued at $1.2 million. He billed taxpayers more than
+            $4,500 for trips near it. His office says the trips were official and the house is for visiting his grandchildren.</p>
+            <p class="src">Sources: <a href="https://www.aol.com/roger-marshall-calls-kansas-cabin-160558785.html">Topeka Capital-Journal</a>; <a href="https://www.yahoo.com/news/politics/articles/u-sen-roger-marshall-leaves-130152437.html">Topeka Capital-Journal, Sept. 18, 2026</a></p>
+          </li>
+          <li class="item">
+            <h3>Late on his family's stock trades</h3>
+            <p>Marshall was up to 17 months late disclosing stock trades made for one of his dependent children. Federal law gives 45 days.</p>
+            <p class="src">Source: <a href="https://www.yahoo.com/news/64-members-congress-violated-law-125839548.html">Business Insider, "Conflicted Congress," 2022</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="section" id="faq" aria-labelledby="faq-h">
       <div class="wrap">
-        <h2 id="faq-h">Roger Marshall: quick answers</h2>
+        <h2 id="faq-h">Roger Marshall: the short answers</h2>
         <div class="faq">
           <div class="qa">
             <h3>Did Roger Marshall sue his patients?</h3>
-            <p>Yes. Court records show Marshall and his Great Bend OB-GYN practice sued more than 700 patients over unpaid bills from 1998 to 2019, some for as little as $101, at 18 percent interest.</p>
+            <p>Yes. Marshall and his Great Bend OB-GYN practice filed debt-collection lawsuits against more than 700 patients from 1998 to 2019, over balances as small as $101, at 18 percent annual interest.</p>
             <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>, from Kansas court records</p>
           </div>
           <div class="qa">
-            <h3>Were Roger Marshall's patients arrested?</h3>
-            <p>In 81 of those cases, the patient was arrested after missing a court date. Marshall's spokesperson says judges, not doctors, issue warrants.</p>
+            <h3>Why were Roger Marshall's patients arrested?</h3>
+            <p>Eighty-one of the patients he sued were arrested after missing court dates in those debt cases. His spokesperson says judges, not doctors, issue the warrants.</p>
             <p class="src">Source: <a href="https://www.nytimes.com/2026/09/08/us/politics/roger-marshall-obgyn-doctor-debts.html">The New York Times</a>; <a href="https://www.kake.com/home/sen-roger-marshall-sued-more-than-700-kansas-patients-for-unpaid-bills-new-york-times/article_e54c9a58-1631-40d8-ace0-3d6b648ad423.html">KAKE News</a></p>
           </div>
           <div class="qa">
-            <h3>How has Roger Marshall voted on health care?</h3>
-            <p>He voted for the 2025 megabill and its Medicaid cuts, against a $35 insulin cap for privately insured patients in 2022 and against extending ACA premium tax credits in 2025.</p>
-            <p class="src">Source: Senate roll calls <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00372.htm">372</a>, <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1172/vote_117_2_00314.htm">314</a> and <a href="https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00644.htm">644</a></p>
+            <h3>How did Roger Marshall vote on health care?</h3>
+            <p>He voted for the 2025 megabill and its Medicaid cuts, against a $35 insulin cap for private insurance in 2022, against extending ACA premium tax credits in 2025 and for the 2017 House bill to repeal the ACA.</p>
+            <p class="src">Source: <a href="#votes">His votes, with roll calls</a></p>
           </div>
           <div class="qa">
-            <h3>Who is running against Roger Marshall in 2026?</h3>
-            <p>Democrat Adam Hamilton, a United Methodist pastor. Kansas votes Nov. 3, 2026.</p>
-            <p class="src">Source: <a href="https://kansasreflector.com/2026/08/04/u-s-sen-roger-marshall-united-methodist-pastor-adam-hamilton-to-compete-in-november/">Kansas Reflector</a></p>
+            <h3>Does Roger Marshall live in Kansas?</h3>
+            <p>He lists a cabin near St. John, appraised at $124,200, as his home. A trust bought a Sarasota, Fla., house in 2019 that was later valued at $1.2 million.</p>
+            <p class="src">Source: <a href="https://www.aol.com/roger-marshall-calls-kansas-cabin-160558785.html">Topeka Capital-Journal</a></p>
           </div>
           <div class="qa">
-            <h3>When is the voter registration deadline in Kansas?</h3>
-            <p>Oct. 13, 2026, for the Nov. 3 general election. You can register online with a Kansas driver's license or state ID.</p>
-            <p class="src">Source: <a href="https://sos.ks.gov/elections/important-election-dates.html">Kansas secretary of state</a></p>
+            <h3>Who is running against Roger Marshall?</h3>
+            <p>Democrat Adam Hamilton, a United Methodist pastor. The general election is Nov. 3, 2026.</p>
+            <p class="src">Source: <a href="https://kansasreflector.com/2026/08/04/u-s-sen-roger-marshall-united-methodist-pastor-adam-hamilton-to-compete-in-november/">Kansas Reflector, Aug. 4, 2026</a></p>
           </div>
           <div class="qa">
-            <h3>When does early voting start in Kansas?</h3>
-            <p>In-person advance voting can start Oct. 14 and ends at noon Nov. 2. Days and hours vary by county.</p>
+            <h3>When is the Kansas voter registration deadline?</h3>
+            <p>Oct. 13, 2026, for the Nov. 3 general election. Advance voting starts as early as Oct. 14.</p>
             <p class="src">Source: <a href="https://sos.ks.gov/elections/important-election-dates.html">Kansas secretary of state</a></p>
           </div>
         </div>
@@ -276,24 +606,34 @@
 
     <section class="section" id="vote" aria-labelledby="vote-h">
       <div class="wrap">
-        <h2 id="vote-h">How to vote in Kansas by Nov. 3</h2>
+        <h2 id="vote-h">Vote him out Nov. 3</h2>
+        <p class="section-intro">Kansas has not sent a Democrat to the U.S. Senate in more than 90 years.
+        This race is close. Every date below comes from the Kansas secretary of state or state law.</p>
+
         <ul class="vote-list">
           <li><b>Register by Oct. 13</b>
-            Online with a Kansas driver&rsquo;s license or ID at the <a href="https://www.kdor.ks.gov/Apps/VoterReg">state registration page</a>,
-            or on the <a href="https://sos.ks.gov/forms/elections/voterregistration.pdf">paper form</a>.</li>
+            Online with a Kansas driver's license or ID at the <a href="https://www.kdor.ks.gov/Apps/VoterReg">state registration page</a>,
+            or on the <a href="https://sos.ks.gov/forms/elections/voterregistration.pdf">paper form</a>.
+            Moved or changed your name? Update it by the same date.</li>
           <li><b>Check your registration</b>
-            See your sample ballot and polling place at <a href="https://myvoteinfo.voteks.org/VoterView">VoterView</a>.</li>
+            Confirm you are registered, see your sample ballot and find your polling place at
+            <a href="https://myvoteinfo.voteks.org/VoterView">VoterView</a>.</li>
           <li><b>Vote early: Oct. 14 to Nov. 2</b>
-            In-person advance voting ends at noon Nov. 2. Hours vary by
-            <a href="https://sos.ks.gov/elections/county_election_officers.aspx">county</a>.</li>
+            In-person advance voting starts as early as Oct. 14 and ends at noon Nov. 2. Days and hours vary by
+            county; ask your <a href="https://sos.ks.gov/elections/county_election_officers.aspx">county election office</a>.</li>
           <li><b>Vote by mail: apply by Oct. 27</b>
-            Use the <a href="https://sos.ks.gov/forms/elections/AV1.pdf">advance ballot application</a>. Your ballot must arrive by 7 p.m. Nov. 3.</li>
+            Send the <a href="https://sos.ks.gov/forms/elections/AV1.pdf">advance ballot application</a> to your county
+            (<a href="https://www.ksrevisor.gov/statutes/chapters/ch25/025_011_0022.html">K.S.A. 25-1122</a>). Your ballot must
+            arrive by 7 p.m. Nov. 3. Drop it at your county election office, a county drop box or any polling place in your county.</li>
           <li><b>Election Day: 7 a.m. to 7 p.m.</b>
-            If you are in line when polls close, you can still vote.</li>
+            Some counties open earlier or close later. If you are in line when polls close, you can still vote.</li>
           <li><b>Bring a photo ID</b>
-            <a href="https://sos.ks.gov/elections/photo-id.html">See what counts</a>, including the free state ID.</li>
+            A driver's license from any state, a passport, a military, tribal or Kansas student ID and others count.
+            <a href="https://sos.ks.gov/elections/photo-id.html">See the full list</a>, including the free state ID.</li>
         </ul>
-        <p class="src">Sources: <a href="https://sos.ks.gov/elections/important-election-dates.html">Kansas secretary of state</a>; <a href="https://www.ksrevisor.gov/statutes/chapters/ch25/025_011_0022.html">K.S.A. 25-1122</a>.</p>
+        <p class="src">Sources: <a href="https://sos.ks.gov/elections/important-election-dates.html">Kansas secretary of state, important election dates</a>;
+        <a href="https://sos.ks.gov/elections/voter-information.html">voter information</a>;
+        <a href="https://www.ksrevisor.gov/statutes/chapters/ch25/025_011_0032.html">K.S.A. 25-1132</a>; on the 90-year streak, <a href="https://www.cbsnews.com/news/kansas-senate-adam-hamilton-roger-marshall-campaign-iran-gas-prices/">CBS News</a>.</p>
       </div>
     </section>
   </main>
@@ -301,13 +641,82 @@
   <footer class="site-footer">
     <div class="wrap">
       <p class="foot-line"><span>Paid for by Valdez Campos.</span>
-        <span>Not authorized by any candidate or candidate&rsquo;s committee.</span></p>
-      <p class="foot-line"><span>Every claim links to its source.</span>
+        <span>Not authorized by any candidate or candidate's committee.</span></p>
+      <p class="foot-line"><span>Every claim links to its source. <a href="mailto:dez@mediabrilliance.io?subject=kansasdeservesbetter.com%20correction">Send a correction</a>.</span>
         <span>No cookies, no tracking.</span></p>
       <p class="credit">Made in Kansas City by
         <a href="https://www.mediabrilliance.io" target="_blank" rel="noopener"><img src="images/mb-mark.svg"
            width="206" height="95" alt="" />mediaBrilliance digitalxtudio</a></p>
     </div>
   </footer>
+  <script>
+    /* Carousel: arrows, a counter and auto-advance every 6 seconds. It pauses on hover,
+       focus or touch, when the tab is hidden, and when the visitor presses Pause, and it
+       never starts for visitors who ask for reduced motion. Without this script the track
+       still scrolls by touch, trackpad and keyboard. */
+    document.querySelectorAll('.reel').forEach(function (reel) {
+      
+      var track = reel.querySelector('.reel-track'), nav = reel.querySelector('.reel-nav'),
+          count = reel.querySelector('.reel-count'), play = reel.querySelector('.reel-play'),
+          slides = track.children, still = matchMedia('(prefers-reduced-motion: reduce)').matches,
+          stopped = still || !play, held = false, timer;
+      nav.hidden = false;
+      function step() { return slides[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0); }
+      function index() { return Math.round(track.scrollLeft / step()); }
+      function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 4; }
+      function go(dir) {
+        var left = (dir > 0 && atEnd()) ? -track.scrollLeft : step() * dir;
+        track.scrollBy({ left: left, behavior: still ? 'auto' : 'smooth' });
+      }
+      function tick() { if (!stopped && !held && !document.hidden) go(1); }
+      function setStopped(v) {
+        stopped = v; if (!play) return; play.setAttribute('aria-pressed', String(v));
+        play.textContent = v ? 'Play' : 'Pause'; play.setAttribute('aria-label', v ? 'Play slides' : 'Pause slides');
+      }
+      setStopped(stopped);
+      timer = setInterval(tick, 6000);
+      nav.addEventListener('click', function (e) {
+        var b = e.target.closest('.reel-btn'); if (!b) return;
+        if (play && b === play) { setStopped(!stopped); return; }
+        setStopped(true); go(+b.dataset.dir);
+      });
+      reel.addEventListener('mouseenter', function () { held = true; });
+      reel.addEventListener('mouseleave', function () { held = false; });
+      reel.addEventListener('focusin', function () { held = true; });
+      reel.addEventListener('focusout', function () { held = false; });
+      track.addEventListener('touchstart', function () { setStopped(true); }, { passive: true });
+      track.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault(); setStopped(true); go(e.key === 'ArrowRight' ? 1 : -1);
+        }
+      });
+      /* a mouse can drag the track; touch already swipes natively */
+      var drag = null;
+      track.addEventListener('pointerdown', function (e) {
+        if (e.pointerType !== 'mouse' || e.button !== 0) return;
+        drag = { x: e.clientX, left: track.scrollLeft, moved: false };
+        track.style.scrollSnapType = 'none';
+      });
+      addEventListener('pointermove', function (e) {
+        if (!drag) return;
+        var dx = e.clientX - drag.x;
+        if (Math.abs(dx) > 4) { drag.moved = true; track.classList.add('dragging'); setStopped(true); }
+        track.scrollLeft = drag.left - dx;
+      });
+      addEventListener('pointerup', function () {
+        if (!drag) return;
+        var moved = drag.moved; drag = null;
+        track.classList.remove('dragging'); track.style.scrollSnapType = '';
+        if (moved) {
+          var i = Math.round(track.scrollLeft / step());
+          track.scrollTo({ left: i * step(), behavior: still ? 'auto' : 'smooth' });
+          track.addEventListener('click', function (ev) { ev.preventDefault(); ev.stopPropagation(); }, { capture: true, once: true });
+        }
+      });
+      track.addEventListener('scroll', function () {
+        count.textContent = Math.min(slides.length, index() + 1) + ' / ' + slides.length;
+      }, { passive: true });
+    });
+  </script>
 </body>
 </html>

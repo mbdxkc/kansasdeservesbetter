@@ -1,6 +1,6 @@
 # kansasdeservesbetter
 
-One-page summary of U.S. Sen. Roger Marshall's record and the Kansas voting dates, linking to the full sourced record at fuckrogermarshall.com. Built as the clean landing page for paid ads.
+The public record of U.S. Sen. Roger Marshall (R-Kan.), sourced line by line, and how Kansans vote on Nov. 3, 2026. The only live site since Oct. 6, 2026 (the earlier domain forwards here) and the landing page for paid ads.
 
 **by mediaBrilliance.io**
 
@@ -10,16 +10,16 @@ One-page summary of U.S. Sen. Roger Marshall's record and the Kansas voting date
 
 ```
 /
-├── index.html      # Hero, the patients, three votes, the way through, vote dates
-├── style.css       # Shared palette and type with fuckrogermarshall.com
+├── index.html      # Hero, dates strip, 18-slide carousel, patient cases, votes, words, money, FAQ, vote dates
+├── style.css       # Mobile first; breakpoints 600 and 900
 ├── fonts/          # Oswald (SIL OFL), latin subset, self-hosted
-├── images/         # Studio mark
+├── images/         # Public-domain photos (WebP 640 and 1200), studio mark
 ├── og.png          # Share card, built from tools/og.html
 ├── favicon.svg, robots.txt, sitemap.xml
 └── _config.yml     # Keeps internal files off GitHub Pages
 ```
 
-No JavaScript, no cookies, no tracking.
+No cookies, no tracking, no third-party requests. One small inline script drives the carousels.
 
 ## Deploy
 

@@ -28,3 +28,14 @@ During setup the fuckrogermarshall repo's Pages custom domain was switched to th
 
 - **Each Pages repo owns exactly one domain.** Changing a custom domain field moves the domain to that repo and takes the old one offline. A second site gets its own empty repo and its own `CNAME`; never point an existing site's field at a new domain
 - **Say "create a new empty repo," not "create a repo,"** to anyone working in the GitHub UI next to an existing one. The near-miss started at a settings page that already existed
+
+---
+
+## 2026-10-06 — The full record moves here; the old domain retires
+
+Valdez retired fuckrogermarshall.com. Before its domain forwards, the full site moved here so nothing was lost: the version just before the harsh rewrite (`76ea97a` in that repo), with this site's name, share card, favicon and URLs, and "Paid for by Valdez Campos." added to the footer. The one-pager and its "See the full record" button are gone, since this page is now the full record. Lighthouse 100 in all four categories, 124 KB, zero HTML errors, no profanity in any served file; the hero fits the first screen at every size measured.
+
+### Mistakes → Rules
+
+- **Move the content before you forward the domain.** A redirect to a summary page that links back to the redirected domain is a loop, and the full record would have existed nowhere
+
