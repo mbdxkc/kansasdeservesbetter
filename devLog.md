@@ -45,3 +45,13 @@ Valdez retired fuckrogermarshall.com. Before its domain forwards, the full site 
 ## 2026-10-06 — Corrections go to Valdez directly
 
 The footer's "Send a correction" link now opens mail to vc3030@gmail.com instead of the studio inbox, keeping mediaBrilliance's address off the campaign. No separate contact page: the correction link is the one contact the site needs.
+
+---
+
+## 2026-10-06 — SEO pass on the full record
+
+Lighthouse already scored SEO 100; the gains were in what Google reads. Section headings now carry the searched name and topic ("The patients Roger Marshall sued," "Roger Marshall's voting record," "Who funds Roger Marshall," "How to vote in the Kansas Senate race") instead of "The votes" and "The money." The kicker says "Kansas Senate race," and the patients intro names "medical debt lawsuits, wage garnishments and arrest warrants," two phrases people search that the page never used. Two FAQs added (the $35 insulin vote, when early voting starts), mirrored in the FAQPage data. Article dateModified, the modified-time meta and the sitemap lastmod moved to Oct. 6.
+
+### Mistakes → Rules
+
+- **A perfect Lighthouse SEO score checks the plumbing, not the words.** The page scored 100 while never saying "medical debt" or "Kansas Senate," the two phrases most likely to bring someone to it. Count the searched terms in the visible text
