@@ -39,3 +39,9 @@ Valdez retired fuckrogermarshall.com. Before its domain forwards, the full site 
 
 - **Move the content before you forward the domain.** A redirect to a summary page that links back to the redirected domain is a loop, and the full record would have existed nowhere
 
+
+---
+
+## 2026-10-06 — Corrections go to Valdez directly
+
+The footer's "Send a correction" link now opens mail to vc3030@gmail.com instead of the studio inbox, keeping mediaBrilliance's address off the campaign. No separate contact page: the correction link is the one contact the site needs.
