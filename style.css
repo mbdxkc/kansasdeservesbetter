@@ -248,3 +248,31 @@ blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(
 .slide-multi .sum dt { font-size: clamp(2.6rem, 8vw, 3.6rem); }
 .slide-quote blockquote + blockquote { margin-top: -.25rem; font-size: clamp(1.2rem, 3vw, 1.5rem); }
 .slide-bq { margin: 0 1.25rem .5rem; font-size: 1.05rem; }
+
+/* phones: heading, card and arrows fit on one screen. Cards share the tallest
+   slide's height, so the tall photo slides set the budget */
+@media (max-width: 599px) {
+  .reel-section { padding-top: 2rem; padding-bottom: 2rem; }
+  .reel-section h2 { font-size: 1.6rem; margin-bottom: .75rem; }
+  .reel-track { padding-bottom: .5rem; }
+  .slide img { aspect-ratio: 2 / 1; }
+  .slide-text { padding: .75rem 1rem .35rem; font-size: .98rem; line-height: 1.45; }
+  .slide .src { padding: .35rem 1rem .8rem; font-size: .8rem; line-height: 1.4; }
+  .slide-quote, .slide-stat { padding: 1rem 1rem 0; }
+  .slide-quote blockquote { font-size: 1.45rem; margin-bottom: .6rem; }
+  .slide-quote blockquote + blockquote { font-size: 1.1rem; }
+  .slide-who { margin-bottom: .6rem; font-size: .98rem; line-height: 1.45; }
+  .slide-stat b { font-size: 3rem; margin-bottom: .4rem; }
+  .slide-multi .sum { gap: .6rem; margin-bottom: .6rem; }
+  .slide-multi .sum dt { font-size: 2.3rem; }
+  .slide-bq { margin: 0 1rem .35rem; font-size: .95rem; }
+  .slide-case { padding: 1rem; }
+  .slide-case > b { font-size: 2.4rem; margin-bottom: .35rem; }
+  .slide-case h3 { font-size: 1.2rem; margin-bottom: .4rem; }
+  .slide-case p { margin-bottom: .6rem; font-size: .98rem; line-height: 1.45; }
+  .slide-case blockquote { font-size: .95rem; margin-bottom: .6rem; }
+  .slide-case .src { font-size: .8rem; }
+  .reel-nav { margin-top: .5rem; gap: .75rem; }
+  .reel-btn { min-width: 2.75rem; min-height: 2.75rem; }
+  .slide-quote .src, .slide-stat .src { padding-left: 0; padding-right: 0; }  /* line up with the quote */
+}

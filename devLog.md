@@ -55,3 +55,13 @@ Lighthouse already scored SEO 100; the gains were in what Google reads. Section 
 ### Mistakes → Rules
 
 - **A perfect Lighthouse SEO score checks the plumbing, not the words.** The page scored 100 while never saying "medical debt" or "Kansas Senate," the two phrases most likely to bring someone to it. Count the searched terms in the visible text
+
+---
+
+## 2026-10-07 — The carousel fits one phone screen
+
+On a phone the 18-slide carousel's heading, card and arrows ran about 750px tall against roughly 600px of visible screen, so the arrows sat below the fold. Every card takes the height of the tallest slide (the Florida house: photo, caption, quote, source), so that one slide set the size of all 18. Under 600px wide: photos crop to 2:1, slide text, quotes and sources step down, padding tightens, and the Florida caption is shorter ("He lists a $124,200 Kansas cabin as home. His Sarasota, Fla., vacation house was later valued at $1.2 million."). Heading to arrows now measures 560px at 430x700, 543 at 390x660 and 537 at 375x600, each inside the screen below the sticky header. The hero fold is unchanged.
+
+### Mistakes → Rules
+
+- **In an equal-height carousel the tallest slide is the only one that matters.** Measure each slide's natural height and trim that one; shrinking the rest changes nothing
