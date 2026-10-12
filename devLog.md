@@ -103,3 +103,13 @@ Pushed Oct. 12 at Valdez's request, a day before the deadline. So nothing on the
 
 - **A deadline change is a sweep, not a section edit.** The request named one section; the same date lived in the strip, the FAQ and its JSON-LD, and all four would have contradicted each other
 - **Date-driven copy that ships early must be true on both sides of the date.** Write the deadline as a fact ("closes Oct. 13") rather than a state ("closed"), and keep the action available until it lapses. On a voter page a false "closed" is voter suppression, not a typo
+
+---
+
+## 2026-10-12 — Footer: "Paid for by" line restored
+
+Reverted a654f3e the same hour. Valdez chose to keep "Paid for by Valdez Campos." on the page while it is an ad destination, so the landing page carries the disclaimer the small search ads rely on. CLAUDE.md's footer rule is back to its original wording.
+
+### Mistakes → Rules
+
+- **Name the dependency when removing a compliance line.** The removal shipped before the reason it was there (the ads' disclaimer resting on the landing page) was stated; say it before the push, not after
