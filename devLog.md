@@ -103,13 +103,3 @@ Pushed Oct. 12 at Valdez's request, a day before the deadline. So nothing on the
 
 - **A deadline change is a sweep, not a section edit.** The request named one section; the same date lived in the strip, the FAQ and its JSON-LD, and all four would have contradicted each other
 - **Date-driven copy that ships early must be true on both sides of the date.** Write the deadline as a fact ("closes Oct. 13") rather than a state ("closed"), and keep the action available until it lapses. On a voter page a false "closed" is voter suppression, not a typo
-
----
-
-## 2026-10-12 — Footer: "Paid for by" line removed
-
-Removed "Paid for by Valdez Campos." from the footer at Valdez's request. "Not authorized by any candidate or candidate's committee." stays on its own line. The Google search ads still carry Google's "Paid for by" disclosure, which comes from the election-ads verification, not from this page. CLAUDE.md's footer rule now says the same.
-
-### Mistakes → Rules
-
-- **A rule in a project file records a past decision, not a law.** The footer rule tied the line to the site being an ad destination; when the owner reverses it, rewrite the rule with the reason and the condition for bringing it back, rather than leaving a contradiction in the file

@@ -28,7 +28,7 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 - **No profanity anywhere served:** page, CSS, share card, file names. Google Ads rejects it and requires the shown domain to match the landing page
 - **Never add an automatic redirect** on this page (meta refresh, JS or server). A forwarding landing page reads as a bridge page
-- **No "Paid for by" line on the page** (removed Oct. 12, 2026, at Valdez's request). The footer keeps "Not authorized by any candidate or candidate's committee." Google shows the "Paid for by" disclosure on the ads themselves from the election-ads verification; if a disclaimer is ever needed on the landing page again, it must name whoever actually pays
+- **"Paid for by Valdez Campos."** stays in the footer while the site is an ad destination, beside "Not authorized by any candidate or candidate's committee"
 
 ## Voting dates
 
