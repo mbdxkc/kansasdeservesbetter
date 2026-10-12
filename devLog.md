@@ -113,3 +113,13 @@ Reverted a654f3e the same hour. Valdez chose to keep "Paid for by Valdez Campos.
 ### Mistakes → Rules
 
 - **Name the dependency when removing a compliance line.** The removal shipped before the reason it was there (the ads' disclaimer resting on the landing page) was stated; say it before the push, not after
+
+---
+
+## 2026-10-12 — Footer: dot separators replaced with space
+
+The middle dot between footer phrases read as a stray bullet, most of all when a line held one phrase plus a dot. Replaced `span + span::before { content: "·" }` with a 1.5em gap on wide screens; phones still stack each phrase on its own line with no gap. Rendered at 1400px.
+
+### Mistakes → Rules
+
+- **A decorative separator is only invisible when both sides are full.** Any edit that leaves one phrase on a line exposes the dot; spacing degrades without a trace

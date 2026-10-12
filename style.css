@@ -138,11 +138,11 @@ blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(
 .site-footer { padding: 2.5rem 0 3rem; color: var(--muted); font-size: .9rem; text-align: center; }
 .site-footer p { margin: 0 auto .6rem; max-width: 46rem; }
 .site-footer .foot-line { max-width: none; }
-.foot-line span + span::before { content: "\00b7"; margin: 0 .6em; color: var(--muted); }
+.foot-line span + span { margin-left: 1.5em; }
 @media (min-width: 900px) { .foot-line span { white-space: nowrap; } }  /* break between parts, never inside one */
 @media (max-width: 899px) {
   .foot-line span { display: block; }
-  .foot-line span + span::before { content: none; }
+  .foot-line span + span { margin-left: 0; }
 }
 .site-footer a { color: var(--muted); display: inline-block; padding: .2rem 0; }
 
