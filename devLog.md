@@ -80,3 +80,13 @@ Every quote was matched against the KCUR article's text, not a summary. kansasre
 - **Cite the copy you could read.** A republication you verified beats an original you could not open; name the originating outlets in the text so credit survives
 
 **Commit:** 49c4dca
+
+---
+
+## 2026-10-12 — FAQ: early-voting question removed
+
+Removed "When does early voting start in Kansas?" from the FAQ and its FAQPage JSON-LD at Valdez's request. With nine questions the grid left an empty cell beside it; eight fill the rows. The early-voting dates stay in the Vote section, the date strip and the closing slide. W3C: 0 errors; JSON-LD parses.
+
+### Mistakes → Rules
+
+- **An FAQ question lives in two places.** Removing it from the markup without the JSON-LD leaves Google a question the page no longer answers
