@@ -123,3 +123,13 @@ The middle dot between footer phrases read as a stray bullet, most of all when a
 ### Mistakes → Rules
 
 - **A decorative separator is only invisible when both sides are full.** Any edit that leaves one phrase on a line exposes the dot; spacing degrades without a trace
+
+---
+
+## 2026-10-12 — Footer: plain sentences
+
+The 1.5em gap that replaced the dots read as broken spacing on the live site. After that rejection, offered four layouts with previews; Valdez chose plain sentences. The gap rule is gone, so the phrases sit on one line separated by the markup's single space, like ordinary prose. Phones still stack each phrase. Rendered at 1400px.
+
+### Mistakes → Rules
+
+- **Swapping one separator for another is still a design guess.** The gap shipped on a one-screenshot check; the faster route was the four-option preview offered after it failed. Offer the options first when a visual call is the user's to make
