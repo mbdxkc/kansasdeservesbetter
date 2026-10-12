@@ -19,6 +19,8 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 - **Insulin (Aug. 7, 2022):** the cap failed for private insurance and survived for Medicare
 - **Rural hospitals (roll call 333):** a motion to commit with instructions on rural hospitals. Senate page says only "Motion to Commit"; the floor log names it
 - **Money:** FEC totals are dated to their report (latest: Pre-Primary, through July 15, 2026). Next report Oct. 15; update the numbers and the dates together. The 18 percent in-state share is of itemized individual dollars only
+- **Taxpayer funds and the 2020 campaign:** Kansas Reflector and MS NOW records (texts, calendars, video) "appear to show" his office using taxpayer funds for campaign travel; experts say "likely crossed the line." Always "appear to show" or "records show," never "he illegally used." Keep the campaign lawyer's denial (Ryan Dollar: "fully comply with both FEC rules and Senate ethics," "a disgruntled employee") beside it, and "No ethics finding has been made." Cite the KCUR republication (Oct. 10, 2026): kansasreflector.com returns 403 to fetchers, so the Reflector original is unverified by us. The Kansas City Star's "14 trips, $18,886" appears only secondhand there; keep it off until the Star piece is read
+- **Florida house:** his office told MS NOW in October 2026 that he had sold it (via the same KCUR piece). Past tense from here on
 - **Stock disclosures:** "up to 17 months late" for one dependent child's trades. No penalty or ethics finding is established
 - Include his walk-backs and his office's explanations where the source carries them. It is what makes the rest hold
 

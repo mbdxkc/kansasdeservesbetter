@@ -65,3 +65,18 @@ On a phone the 18-slide carousel's heading, card and arrows ran about 750px tall
 ### Mistakes → Rules
 
 - **In an equal-height carousel the tallest slide is the only one that matters.** Measure each slide's natural height and trim that one; shrinking the rest changes nothing
+
+---
+
+## 2026-10-12 — Taxpayer funds on campaign trips (Kansas Reflector and MS NOW)
+
+Added the Kansas Reflector and MS NOW investigation (via KCUR, Oct. 10, 2026) as a "Who funds" item: 2020 texts, calendars and video that appear to show his office booking campaign trips with taxpayer funds, Robertson's "Primary purpose is what we say it is," the Oct. 14, 2020, all-staff campaign Zoom, the experts' view and the campaign lawyer's denial. A new FAQ ("Did Roger Marshall use taxpayer money for his campaign?") went into both the page and the FAQPage JSON-LD. The Florida house item and FAQ now note his office told MS NOW he sold it. dateModified, `@updated` and the sitemap moved to Oct. 12.
+
+Every quote was matched against the KCUR article's text, not a summary. kansasreflector.com answers 403 to curl and to the fetch tool, so the page cites the KCUR republication it could read and names the Reflector and MS NOW in the copy. The Star's Sarasota trip figure appears there only secondhand and stayed off. W3C: 0 errors; JSON-LD parses; the money section renders at 1280 and 600.
+
+### Mistakes → Rules
+
+- **An investigation's verbs are part of the claim.** The reporters wrote "appear to show" and experts said "likely crossed the line"; copying the verbs, the denial and "no ethics finding" is what lets the item survive a hostile read
+- **Cite the copy you could read.** A republication you verified beats an original you could not open; name the originating outlets in the text so credit survives
+
+**Commit:** pending
