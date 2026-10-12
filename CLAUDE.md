@@ -30,6 +30,11 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 - **Never add an automatic redirect** on this page (meta refresh, JS or server). A forwarding landing page reads as a bridge page
 - **"Paid for by Valdez Campos."** stays in the footer while the site is an ad destination, beside "Not authorized by any candidate or candidate's committee"
 
+## Voting dates
+
+- Registration closed Oct. 13, 2026. After that date the Vote section leads with checking registration (VoterView), and the date strip shows early voting, the Oct. 27 mail-ballot application and Election Day. Never tell anyone to register after Oct. 13
+- Mail ballots must ARRIVE by 7 p.m. on Election Day; the postmark grace period ended Jan. 1, 2026 (K.S.A. 25-1132, L. 2025, ch. 8)
+
 ## Site
 
 - One page. The only JavaScript drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected)

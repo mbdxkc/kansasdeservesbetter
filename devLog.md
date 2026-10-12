@@ -90,3 +90,16 @@ Removed "When does early voting start in Kansas?" from the FAQ and its FAQPage J
 ### Mistakes → Rules
 
 - **An FAQ question lives in two places.** Removing it from the markup without the JSON-LD leaves Google a question the page no longer answers
+
+---
+
+## 2026-10-12 — Vote section for after the registration deadline
+
+Rewrote the Vote section for Oct. 14 through Nov. 3. The "Register by Oct. 13" card is gone; the intro says registration closed Oct. 13, "Check your registration" leads, and the mail card split in two: apply by Oct. 27, and return by 7 p.m. Nov. 3, with the postmark rule stated from K.S.A. 25-1132 (read on ksrevisor.gov: receipt by 7 p.m., effective Jan. 1, 2026). The date strip swapped "Register by Oct. 13" for "Mail ballot apply by Oct. 27"; the registration FAQ (page and JSON-LD) now answers in the past tense and points to VoterView. Six cards keep the grid full. W3C: 0 errors; JSON-LD parses; the strip still fits three lines on a 390px phone under the unchanged hero.
+
+Built Oct. 12, a day before the deadline, and held from deploy until Oct. 14 so the live site keeps telling people to register while they still can.
+
+### Mistakes → Rules
+
+- **A deadline change is a sweep, not a section edit.** The request named one section; the same date lived in the strip, the FAQ and its JSON-LD, and all four would have contradicted each other
+- **Ship date-driven copy on the date, not when it is written.** Pushing post-deadline copy early removes live instructions people still need
