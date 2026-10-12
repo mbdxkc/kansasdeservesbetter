@@ -79,4 +79,4 @@ Every quote was matched against the KCUR article's text, not a summary. kansasre
 - **An investigation's verbs are part of the claim.** The reporters wrote "appear to show" and experts said "likely crossed the line"; copying the verbs, the denial and "no ethics finding" is what lets the item survive a hostile read
 - **Cite the copy you could read.** A republication you verified beats an original you could not open; name the originating outlets in the text so credit survives
 
-**Commit:** pending
+**Commit:** 49c4dca
