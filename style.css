@@ -6,7 +6,7 @@
   @desc       One page, mobile first. Breakpoints at 600 and 900 px.
   @author     mediaBrilliance digitalxtudio
   @version    0.1.0
-  @updated    2026-10-05
+  @updated    2026-10-14
   ============================================================================
 */
 
@@ -162,7 +162,10 @@ blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(
 
 /* short answers: one question per block */
 .faq { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-@media (min-width: 900px) { .faq { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) {
+  .faq { grid-template-columns: 1fr 1fr; }
+  .qa:last-child:nth-child(odd) { grid-column: 1 / -1; }  /* no empty cell when the count is odd */
+}
 .qa { background: var(--bg); padding: 1.5rem 1.25rem; }
 .qa h3 { font-size: clamp(1.2rem, 2.6vw, 1.4rem); text-transform: none; margin-bottom: .6rem; }
 .qa p { margin: 0 0 .75rem; }

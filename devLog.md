@@ -133,3 +133,13 @@ The 1.5em gap that replaced the dots read as broken spacing on the live site. Af
 ### Mistakes → Rules
 
 - **Swapping one separator for another is still a design guess.** The gap shipped on a one-screenshot check; the faster route was the four-option preview offered after it failed. Offer the options first when a visual call is the user's to make
+
+## 2026-10-14 — Voting copy after the registration deadline
+
+Registration closed Oct. 13 and advance voting opened Oct. 14, so both dates came off the page. The date strip and the Vote card now read "Vote early: now to Nov. 2", and the card says advance voting is open in many counties (counties set their own start days, so "as early as" is not carried forward as a date). The intro drops the registration sentence. "Check your registration" points only to VoterView; the register-or-update link is gone. The FAQ "When is the Kansas voter registration deadline?" is removed from the page and the JSON-LD. The Oct. 14, 2020, Zoom call in the taxpayer-funds item is history and stays.
+
+Removing the FAQ left seven answers in a two-column grid, which shows an empty grey cell. An odd last answer now spans both columns at 900px and up; measured at 1280, the seventh is 1006px wide against 503 for the others. dateModified, @updated and the sitemap lastmod moved to 2026-10-14. JSON-LD parses.
+
+### Mistakes → Rules
+
+- A two-column grid with a 1px-gap border background shows an empty cell the moment its count goes odd. Any removal from a grid list needs the odd-count case handled, not just the item deleted

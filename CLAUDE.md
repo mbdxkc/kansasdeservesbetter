@@ -32,7 +32,7 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 ## Voting dates
 
-- Registration closes Oct. 13, 2026. Since Oct. 12 the Vote section leads with checking registration (VoterView), and the date strip shows early voting, the Oct. 27 mail-ballot application and Election Day. Never tell anyone to register after Oct. 13
+- Registration closed Oct. 13, 2026, and advance voting opened Oct. 14. Since Oct. 14 the site names neither date: the Vote section and date strip say "Vote early: now to Nov. 2", the registration FAQ is gone and checking registration points only to VoterView. Never tell anyone to register. The Oct. 14, 2020, Zoom call in the taxpayer-funds item is history, not a voting date, and stays
 - Mail ballots must ARRIVE by 7 p.m. on Election Day; the postmark grace period ended Jan. 1, 2026 (K.S.A. 25-1132, L. 2025, ch. 8)
 
 ## Site
