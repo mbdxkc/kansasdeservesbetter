@@ -749,6 +749,16 @@
         count.textContent = Math.min(slides.length, index() + 1) + ' / ' + slides.length;
       }, { passive: true });
     });
+
+    /* Counts clicks from the Vote section to the state's voter tools (VoterView,
+       ballot application, photo ID list) as one Analytics event. Source citations
+       under the section are not counted. */
+    document.querySelectorAll('#vote a[href*="voteks.org"], #vote a[href*="sos.ks.gov"]').forEach(function (a) {
+      if (a.closest('.src')) return;
+      a.addEventListener('click', function () {
+        if (window.gtag) gtag('event', 'vote_link_click', { link_url: a.href });
+      });
+    });
   </script>
 </body>
 </html>

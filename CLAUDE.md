@@ -37,7 +37,7 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 ## Site
 
-- One page. The only JavaScript drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected)
+- One page. The only JavaScript drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected). A second small listener sends the `vote_link_click` Analytics event when a Vote-section link to voteks.org or sos.ks.gov is clicked (source citations excluded); it is the Google Ads conversion
 - Photos are public domain only (U.S. Senate, USDA), credited on each slide. Never news-agency or image-search photos
 - Hero sized by screen height and width so headline, intro and "Make a plan to vote" fit the first screen; re-measure after any hero copy change
 - Self-hosted Oswald. The one third-party request is Google Analytics (GA4 `G-SFSM1D23NT`, added 2026-10-15 for Google Ads reporting), which sets `_ga` cookies; the footer says "Uses Google Analytics to count visits." Never reinstate a "no cookies" or "no tracking" claim while the tag ships
