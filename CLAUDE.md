@@ -40,5 +40,5 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 - One page. The only JavaScript drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected)
 - Photos are public domain only (U.S. Senate, USDA), credited on each slide. Never news-agency or image-search photos
 - Hero sized by screen height and width so headline, intro and "Make a plan to vote" fit the first screen; re-measure after any hero copy change
-- Self-hosted Oswald; no cookies, no analytics, no third-party requests
+- Self-hosted Oswald. The one third-party request is Google Analytics (GA4 `G-SFSM1D23NT`, added 2026-10-15 for Google Ads reporting), which sets `_ga` cookies; the footer says "Uses Google Analytics to count visits." Never reinstate a "no cookies" or "no tracking" claim while the tag ships
 - AP style: no Oxford comma, abbreviated months with dates, hyphenated ranges

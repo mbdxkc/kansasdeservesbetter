@@ -19,7 +19,7 @@ The public record of U.S. Sen. Roger Marshall (R-Kan.), sourced line by line, an
 └── _config.yml     # Keeps internal files off GitHub Pages
 ```
 
-No cookies, no tracking, no third-party requests. One small inline script drives the carousels.
+Google Analytics (GA4, `G-SFSM1D23NT`) counts visits and outbound source clicks. One small inline script drives the carousels.
 
 ## Deploy
 
