@@ -143,3 +143,21 @@ Removing the FAQ left seven answers in a two-column grid, which shows an empty g
 ### Mistakes → Rules
 
 - A two-column grid with a 1px-gap border background shows an empty cell the moment its count goes odd. Any removal from a grid list needs the odd-count case handled, not just the item deleted
+
+---
+
+## 2026-10-16 — FEC numbers from the October Quarterly report
+
+Marshall's October Quarterly (July 16-Sept. 30, filed Oct. 15) replaced the Pre-Primary figures, pulled from the OpenFEC API and reconciled against the old numbers first: the July totals reproduce exactly as other-political-committee contributions (line 11C, party excluded) and individual contributions summed over the 2022, 2024 and 2026 cycles.
+
+- Cash on hand: $5.4M to $922K, after $5,266,608 in disbursements in the period. Receipts in the period: $800,618
+- PACs and committees over his Senate term: $2,787,645. Individuals: $2,880,798. Individuals now lead, so "PACs outgave people" became "PACs nearly match people" and the stat says "nearly as much as from individual donors"
+- The 18 percent Kansas share stays, now dated through July 15: FEC's contributions-by-state data has not processed the October report (its total is unchanged at $2,473,985)
+
+Carousel slide 15, the stats strip, the PAC item, the state item, dateModified, @updated and the sitemap lastmod changed. JSON-LD parses. Rendered the money section at 1280 and 390.
+
+### Mistakes → Rules
+
+- **A comparison claim can flip on a routine data refresh.** "PACs outgave people" rested on a $4,233 margin; one quarter reversed it. Recompute every comparative claim on each report, not only the headline totals
+- **FEC's derived tables lag the filings.** Report totals update the day of filing; by-state aggregates and processed Schedule A can trail by weeks. Date each figure to the data it actually came from
+- **Check the port before trusting a local render.** 5511 was already held by another server, and a probe rendered mediabrilliance.io as if it were this page. Serve with `--directory` on a port confirmed free, and assert a known string in the served HTML first
