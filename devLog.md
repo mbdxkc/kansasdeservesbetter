@@ -161,3 +161,37 @@ Carousel slide 15, the stats strip, the PAC item, the state item, dateModified, 
 - **A comparison claim can flip on a routine data refresh.** "PACs outgave people" rested on a $4,233 margin; one quarter reversed it. Recompute every comparative claim on each report, not only the headline totals
 - **FEC's derived tables lag the filings.** Report totals update the day of filing; by-state aggregates and processed Schedule A can trail by weeks. Date each figure to the data it actually came from
 - **Check the port before trusting a local render.** 5511 was already held by another server, and a probe rendered mediabrilliance.io as if it were this page. Serve with `--directory` on a port confirmed free, and assert a known string in the served HTML first
+
+---
+
+## 2026-10-16 — Fact-check of the live page
+
+Every claim on the live page checked against its cited source: 10 Senate roll calls and one House roll call from their XML, the floor log, FEC, the Kansas statutes and secretary of state pages, and 23 news pages. The New York Times, Kansas Reflector's own site and CBO block fetchers, so the Times claims were confirmed through the outlets that report it (Medical Economics, KAKE, The Daily Beast, The New Republic, Hoodline, The University Daily Kansan).
+
+Five fixes:
+
+- **The Florida-house sources named the wrong outlet.** The cabin story on AOL is The Kansas City Star (Desrochers and Shorman, Sept. 25, 2024; AOL's `providerId` says `kansas_city_star`), and the Sept. 18, 2026, story on Yahoo is Kansas Reflector (Anna Kaminski). Both were credited to the Topeka Capital-Journal, in the carousel, the money item and the FAQ
+- **"About $10.8 million" was not in the AP story.** It gives nearly $8.2 million (Senate Leadership Fund) plus $2.3 million (Marshall) plus $500,000 (other groups): nearly $11 million. Hamilton's $590,000 plus a little more than $556,000 does support about $1.15 million
+- **Zimmerman's C-section was not in either cited source.** The Daily Beast says "delivery bill"; Hoodline, reporting the Times, says "emergency cesarean-section bill." Hoodline added to her card
+- **The cease-and-desist story is dated Sept. 29**, 10:55 p.m. CDT. The URL's 09/30 is UTC
+
+Checked and holding: all roll-call dates, times, tallies and Marshall's votes; the Markey motion (floor log, 11:06 a.m.); 700+, 81, 13 more warrants, $101, 18 percent and who set it, 1998-2019, ownership years; every patient detail; every quote and its date; the stock-disclosure lag; the cabin, the sale 10 days after swearing-in, $750,000, $1.2 million, $4,500; the taxpayer-funds item; the 90-year streak; every voting date, the 7 p.m. receipt deadline, poll hours and the photo ID list.
+
+Not in the cited source, true but unsourced on the page: "The law allows 45 days" (STOCK Act), the premium credits expiring Dec. 31, 2025 and their "three-year" extension, and "This race is close." The CBO's 23 million (2017) could not be fetched.
+
+### Mistakes → Rules
+
+- **A syndicated URL does not name its publisher.** AOL and Yahoo carry the Star, the Reflector and the Capital-Journal under one domain. Read the byline, the photo credit or the page's `providerId` before naming the outlet
+- **A sum is a claim.** "$10.8 million" was arithmetic on AP's figures, and the arithmetic was wrong. Either quote the source's own total or show the parts
+- **A detail on a card needs a source on that card.** The C-section was true and sourced elsewhere on the page, not where a reader checking her story would look
+
+---
+
+## 2026-10-16 — Google Ads tag on the existing Google tag
+
+The campaign's goal is page views. Its "Page views" page-load conversion had recorded 0 because the Ads tag was never on the page. Added `gtag('config', 'AW-18498605429');` to the existing gtag block, with no second script tag. The footer now reads "Uses Google Analytics and Google Ads to count visits." Bidding should be Maximize clicks, since about seven clicks a week can never train conversion bidding. `vote_link_click` stays as a reporting event.
+
+### Mistakes → Rules
+
+- **A conversion goal can sit at 0 with nothing to say why.** Ads showed "Page views: 0" next to a healthy click count, because the conversion depended on a tag that had never been installed. When a conversion reads 0 against nonzero clicks, check that its tag is on the page before reading anything into the zero
+- **Adding a tracker changes the disclosure.** The footer named Google Analytics only; the Ads tag sets its own cookies, so the line changed in the same commit
