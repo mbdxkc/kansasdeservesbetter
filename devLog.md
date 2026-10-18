@@ -195,3 +195,17 @@ The campaign's goal is page views. Its "Page views" page-load conversion had rec
 
 - **A conversion goal can sit at 0 with nothing to say why.** Ads showed "Page views: 0" next to a healthy click count, because the conversion depended on a tag that had never been installed. When a conversion reads 0 against nonzero clicks, check that its tag is on the page before reading anything into the zero
 - **Adding a tracker changes the disclosure.** The footer named Google Analytics only; the Ads tag sets its own cookies, so the line changed in the same commit
+
+---
+
+## 2026-10-18 — Minified build, like the other client sites
+
+The page served `style.css` as written (14.5 KB) and carried the carousel and Vote-link scripts inline (4.3 KB with comments). Fall Crawl, MuNi, O'B's and mediabrilliance.io all ship minified files with hash cache stamps, so this site now does too.
+
+- The inline script moved to `js/site.js`, loaded as `js/site.min.js` with `defer` at the same spot at the end of `body`. The Google tag and JSON-LD stay inline
+- `tools/build.sh` is Fall Crawl's script cut down to one page: `cleancss -O1` and `terser --compress --mangle`, then `?v=<8 hex of SHA-256>` on both URLs in `index.html`. `--check` exits 1 on a stale build
+- Sizes: stylesheet 14,531 to 10,896 bytes; script 4.3 KB inline to 2,276 bytes
+- Verified against a `git archive` of HEAD in headless Chrome, GA and Google Ads blocked by host-resolver rules, reduced motion forced: 0 differing pixels across a 1280x9000 capture. The built script ran: both carousel navs lost `hidden` and the Pause button got its label
+
+### Mistakes → Rules
+- **An inline script moved to a file keeps its timing only with `defer`, or by staying at the end of `body`.** This one does both, so it still runs after the carousels exist in the DOM
