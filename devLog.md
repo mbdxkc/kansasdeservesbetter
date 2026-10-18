@@ -195,3 +195,14 @@ The campaign's goal is page views. Its "Page views" page-load conversion had rec
 
 - **A conversion goal can sit at 0 with nothing to say why.** Ads showed "Page views: 0" next to a healthy click count, because the conversion depended on a tag that had never been installed. When a conversion reads 0 against nonzero clicks, check that its tag is on the page before reading anything into the zero
 - **Adding a tracker changes the disclosure.** The footer named Google Analytics only; the Ads tag sets its own cookies, so the line changed in the same commit
+
+---
+
+## 2026-10-18 — Footer: "Paid for by" line removed
+
+Removed "Paid for by Valdez Campos." from the footer at Valdez's request. "Not authorized by any candidate or candidate's committee." stays. The first removal (Oct. 12, `a654f3e`) was reverted within the hour; this one follows a check of what the disclaimer was doing. FEC disclaimer rules reach a self-published site only through paid internet ads that expressly advocate, and the current search ads ask and answer questions about the record without telling anyone how to vote. Google already names the verified advertiser on the ads and in its Political Ads Transparency Report, so the name stays public there. Also corrected the campaign note in CLAUDE.md: the campaign has no conversion goals and is judged on clicks; the Oct. 16 entry above describes a goal that never existed.
+
+### Mistakes → Rules
+
+- **A disclaimer on a landing page can be load-bearing for an ad elsewhere.** Before removing one, ask which communication it serves. Here it served only ads that do not expressly advocate, so it was optional; an ad that says "vote against" would make it required again
+- **Record the goal the user states, not the one the dashboard implies.** A "Page views" conversion action in the account read as the campaign's goal for two days. Valdez's goal was clicks all along
