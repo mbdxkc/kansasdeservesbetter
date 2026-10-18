@@ -28,7 +28,7 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 - **No profanity anywhere served:** page, CSS, share card, file names. Google Ads rejects it and requires the shown domain to match the landing page
 - **Never add an automatic redirect** on this page (meta refresh, JS or server). A forwarding landing page reads as a bridge page
-- **No "Paid for by" line on the page** (removed Oct. 18, 2026, at Valdez's request, after a first removal on Oct. 12 was reverted the same hour). The footer keeps "Not authorized by any candidate or candidate's committee." FEC disclaimer rules reach a self-published site only through paid ads that expressly advocate; the current ads do not ("Did Marshall Sue Patients? Yes"), and Google discloses the verified advertiser on its ads and in its Political Ads Transparency Report. If an ad ever says to vote for or against anyone, the landing page needs a full disclaimer again, naming whoever actually pays. Check with the FEC (800-424-9530) before that change
+- **"Paid for by Valdez Campos."** stays in the footer while the site is an ad destination, beside "Not authorized by any candidate or candidate's committee"
 
 ## Voting dates
 
