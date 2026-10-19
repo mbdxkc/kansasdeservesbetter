@@ -37,8 +37,10 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 ## Also on the ballot
 
-- Added 2026-10-19 below the Vote section: the statewide races and the one constitutional amendment, candidates alphabetical by last name with party, no advocacy in any race but the Senate's. District races (U.S. House, Legislature, State Board of Education, judges, local) point to VoterView rather than being listed
-- Candidates come from the Sedgwick County Election Office general-election list (CSV at sedgwickcounty.org/ElectedOffice/Candidates/), because a county ballot carries every statewide race. The Kansas secretary of state's candidate list blocks automated fetches (CloudFront 403); check it by hand if a name is ever disputed. No third-party candidate appears statewide on that list as of Oct. 19, 2026, despite secondary sources naming some; do not add any without a ballot source
+- Added 2026-10-19 below the Vote section: every statewide race, all four U.S. House races and the one constitutional amendment, candidates alphabetical by last name with party, no advocacy in any race but the Senate's. Legislature, State Board of Education, judges and local races point to VoterView
+- Candidates come from county election offices' official general-election lists, because each county ballot carries every statewide race: Johnson (statewide, District 3), Shawnee (statewide, District 2), Saline (statewide, District 1, updated Sept. 15), Sedgwick (District 4). The three that carry the statewide races agree name for name. The secretary of state's candidate list blocks automated fetches (CloudFront 403); check it by hand if a name is ever disputed
+- **Sedgwick County's list omits the statewide minor-party nominees** (Graham, Morgan, Lund, Koehn) that the other three carry. The first version of this section used it alone and published a ballot missing four candidates for about two hours. Never source the statewide races from Sedgwick
+- Third-party candidates: David C. Graham (Libertarian) is on the ballot for U.S. Senate, so the FAQ answer to "Who is running against Roger Marshall?" names him beside Hamilton
 - The amendment text quotes the secretary of state's explanatory statement verbatim
 - The footer reads "Paid for by Valdez Campos. Not an endorsement." (Valdez's wording, Oct. 19, 2026)
 
