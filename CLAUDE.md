@@ -35,6 +35,13 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 - Registration closed Oct. 13, 2026, and advance voting opened Oct. 14. Since Oct. 14 the site names neither date: the Vote section and date strip say "Vote early: now to Nov. 2", the registration FAQ is gone and checking registration points only to VoterView. Never tell anyone to register. The Oct. 14, 2020, Zoom call in the taxpayer-funds item is history, not a voting date, and stays
 - Mail ballots must ARRIVE by 7 p.m. on Election Day; the postmark grace period ended Jan. 1, 2026 (K.S.A. 25-1132, L. 2025, ch. 8)
 
+## Also on the ballot
+
+- Added 2026-10-19 below the Vote section: the statewide races and the one constitutional amendment, candidates alphabetical by last name with party, no advocacy in any race but the Senate's. District races (U.S. House, Legislature, State Board of Education, judges, local) point to VoterView rather than being listed
+- Candidates come from the Sedgwick County Election Office general-election list (CSV at sedgwickcounty.org/ElectedOffice/Candidates/), because a county ballot carries every statewide race. The Kansas secretary of state's candidate list blocks automated fetches (CloudFront 403); check it by hand if a name is ever disputed. No third-party candidate appears statewide on that list as of Oct. 19, 2026, despite secondary sources naming some; do not add any without a ballot source
+- The amendment text quotes the secretary of state's explanatory statement verbatim
+- The footer reads "Paid for by Valdez Campos. Not an endorsement." (Valdez's wording, Oct. 19, 2026)
+
 ## Site
 
 - **Build:** index.html loads `style.min.css` and `js/site.min.js`. Edit `style.css` and `js/site.js`, then run `tools/build.sh`, which minifies both and stamps their URLs with an 8-hex SHA-256 (`--check` to verify). An unbuilt source edit ships as a no-op. Only the Google tag and the JSON-LD stay inline

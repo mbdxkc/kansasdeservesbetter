@@ -209,3 +209,9 @@ The page served `style.css` as written (14.5 KB) and carried the carousel and Vo
 
 ### Mistakes → Rules
 - **An inline script moved to a file keeps its timing only with `defer`, or by staying at the end of `body`.** This one does both, so it still runs after the carousels exist in the DOM
+
+### 2026-10-19 - Also on the Kansas ballot; "Not an endorsement"
+
+A new section after the Vote section lists every statewide race on the Nov. 3 ballot (U.S. Senate, governor and lieutenant governor, secretary of state, attorney general, treasurer, insurance commissioner) and the citizenship amendment, with a card sending readers to VoterView for district races. Candidates are alphabetical by last name with party. Names come from the Sedgwick County Election Office's general-election CSV, since a county ballot carries every statewide race; the secretary of state's own list returns CloudFront 403 to curl, WebFetch and headless Chrome alike. The amendment quotes the secretary of state's explanatory statement. The footer's paid-for line now ends "Not an endorsement." Checked in Firefox Developer Edition at 390 and 1280 with GA blocked: no horizontal overflow, no console errors.
+
+- When the primary source blocks automated access, find a second government source that must carry the same facts. A county ballot list is complete for statewide races by construction; a news roundup is not
