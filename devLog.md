@@ -234,3 +234,15 @@ Google Ads demographics for Oct. 14-20 put 62 percent of impressions at age 55 a
 - Desktop at 1280 measured identical before and after: every target size and the carousel height
 
 - When the "Get the mail ballot application" deadline passes Oct. 27, that card and its button change together
+
+### 2026-10-21 (later) - Spanish edition at /es/, with ICE in Kansas
+
+`es/index.html` translates the whole record (carousel, nine cases, votes, words, money, FAQ, voting, ballot) and adds **ICE en Kansas y la postura de Roger Marshall** after the patients section, written for Liberal and the rest of southwest Kansas. Every new claim was read at its source before it went in: KCUR and Kansas News Service on the Sept. 22-24 operation, KCTV5 for DHS's account, The Kansas City Star and Marshall's own Senate release for his statements, senate.gov roll calls 372 and 7, the National Immigration Forum on H.R. 1's ICE money, the 2020 Census for Liberal (via KU), TRAC for national detention and KCTV5 for Leavenworth.
+
+- Each page links to the other on its own line under the kicker, with `hreflang` alternates in both heads and in the sitemap. The link is a 44px target held to one line of height by negative margins
+- `tools/build.sh` now stamps `es/index.html` too, matching its `../` paths; `js/site.js` reads the Pause button's words from `data-*` attributes so the Spanish page says Pausa and Seguir
+- Firefox Developer Edition, GA blocked, at 360x640, 375x667, 390x844, 768x1024, 1280x800 and 1440x900 on both pages: no horizontal overflow, header links inside the gutter, every asset 200, Oswald loaded with Spanish accents, hero button on the first screen (tightest: Spanish at 360x640, 621 of 640)
+
+- A number repeated by several outlets can still trace to a source nobody has read. "104 arrests" ran everywhere attributed to the U.S. Attorney's Office, and no release could be found; the page says "decenas," which the vice mayor said on the record
+- Same day, at Valdez's direction: the whole page moved from `usted` to `tú` and to plain local wording (133 replacements, each asserted to match exactly once or a stated number of times, file written only after all matched). The FAQ answers changed in the page and the JSON-LD together
+- A header button label that fits in English may not fit translated. "Vote el 3 de nov." ran to the viewport edge at 360 wide; "Cómo votar" fits. Measure every header label at the narrowest width per language

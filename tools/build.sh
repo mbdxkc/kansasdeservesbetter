@@ -5,7 +5,7 @@
 # ============================================================================
 #   @file       tools/build.sh
 #   @author     mediaBrilliance digitalxtudio
-#   @updated    2026-10-18
+#   @updated    2026-10-21
 # ============================================================================
 #
 #   index.html loads style.min.css and js/site.min.js. An edit to style.css or
@@ -55,19 +55,23 @@ done
 # first 8 hex of the built file's SHA-256. GitHub Pages lets a browser reuse a
 # file for 10 minutes, so an unstamped stylesheet can pair new HTML with old
 # CSS. A changed file is a changed URL; an unchanged one keeps its cached copy.
-for pair in "style.min.css:style.min.css" "site.min.js:js/site.min.js"; do
-  dest="${pair#*:}"
-  hash="$(shasum -a 256 "$tmp/${pair%%:*}" | cut -c1-8)"
-  want="$dest?v=$hash"
-  if grep -q "\"$want\"" index.html; then
-    continue
-  elif (( CHECK )); then
-    echo "stale  index.html ($dest stamp)"; stale=1
-  else
-    sed -i '' -E "s#\"$dest(\\?v=[0-9a-f]+)?\"#\"$want\"#" index.html
-    grep -q "\"$want\"" index.html || { echo "error: no $dest reference in index.html" >&2; exit 1; }
-    echo "stamp  index.html -> $want"
-  fi
+# es/index.html reaches the same files through "../", so the match allows it.
+for page in index.html es/index.html; do
+  [[ "$page" == es/* ]] && up="../" || up=""
+  for pair in "style.min.css:style.min.css" "site.min.js:js/site.min.js"; do
+    dest="${pair#*:}"
+    hash="$(shasum -a 256 "$tmp/${pair%%:*}" | cut -c1-8)"
+    want="$up$dest?v=$hash"
+    if grep -q "\"$want\"" "$page"; then
+      continue
+    elif (( CHECK )); then
+      echo "stale  $page ($dest stamp)"; stale=1
+    else
+      sed -i '' -E "s#\"$up$dest(\\?v=[0-9a-f]+)?\"#\"$want\"#" "$page"
+      grep -q "\"$want\"" "$page" || { echo "error: no $dest reference in $page" >&2; exit 1; }
+      echo "stamp  $page -> $want"
+    fi
+  done
 done
 
 if (( stale )); then

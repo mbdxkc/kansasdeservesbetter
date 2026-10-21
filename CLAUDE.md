@@ -24,6 +24,22 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 - **Stock disclosures:** "up to 17 months late" for one dependent child's trades. No penalty or ethics finding is established
 - Include his walk-backs and his office's explanations where the source carries them. It is what makes the rest hold
 
+## Spanish edition (/es/)
+
+- Added 2026-10-21: `es/index.html` is the full page in Spanish plus one section the English page does not carry, **ICE en Kansas** (`#ice`), after the patients. It loads the same `style.min.css`, `js/site.min.js`, font and images through `../`; `tools/build.sh` stamps both pages
+- **Every edit to the English record is an edit to the Spanish one.** The two pages share no markup, so a corrected number, date or source has to be made twice. Grep `es/index.html` for the same claim before committing
+- Quotes are translated and the footer says so; source links stay to the English originals. Voice: `tú`, never `usted`, in plain everyday Spanish as spoken in southwest Kansas (Valdez, Oct. 21, 2026): "clínica" not "consultorio," "la gran ley de gastos" not "megaley," "el seguro de Obamacare" not "créditos fiscales para las primas." Simpler words never loosen a record rule: "a 81 los arrestaron después de faltar a la corte" keeps the qualifier. US number format ($2,787,645), Spanish dates (3 de noviembre de 2026). The FEC-style disclaimer appears in Spanish and again in English
+- Each page links to the other on its own line under the kicker, with `hreflang` alternates in both heads and in `sitemap.xml`. The Pause button takes its Spanish words from `data-*` attributes; `js/site.js` falls back to English
+- `og.png` is English-only; the Spanish page reuses it
+
+## ICE section rules
+
+- **Liberal, Sept. 22-24, 2026** comes from KCUR / Kansas News Service (Sept. 24, 2026): officials learned Monday night, "dozens" detained per Vice Mayor Janeth Vazquez, ICE gave no count, 120 students absent at Meadowlark Elementary on Sept. 23, the Duran/Navarrete stop. The widely repeated "104 arrests" is attributed to the U.S. Attorney's Office but no such release was found; keep it off until one is read
+- Keep the federal side beside it: DHS Secretary Markwayne Mullin (KCTV5, paraphrased: no worksite operations in Kansas, targets with final removal orders) and Sen. Jerry Moran's account of Mullin's assurance (KCUR)
+- **Marshall now:** the Sept. 23, 2026 X post, text from The Kansas City Star (Sept. 24). It asks for coordination with local police; do not characterize it as opposing ICE. **Marshall before:** his own Aug. 25, 2025 release (marshall.senate.gov/?p=80799) and the March 2026 X post as quoted by the Star. "Illegal immigrants" and "illegal aliens" are his words, translated literally inside quotation marks
+- **Votes:** H.R. 1, roll call 372 (July 1, 2025); "more than $75 billion" for ICE over four years and $45 billion for detention are the National Immigration Forum's figures (July 2025 PDF), attributed by name. Laken Riley Act, S. 5, roll call 7 (Jan. 20, 2025), described as the Senate page does: custody for aliens charged with theft
+- **Numbers:** Liberal 68 percent Hispanic or Latino is the 2020 Census (13,499 of 19,825, via KU's Institute for Policy & Social Research; census.gov QuickFacts returns 403 to fetchers). National detention (65,765 held, 70.6 percent with no criminal conviction, July 11, 2026) is TRAC. Leavenworth: 4-1 permit vote March 10, 2026, about 20 detainees by March 19 (KCTV5). Later population figures exist only on Wikipedia; keep them off
+
 ## Clean voice
 
 - **No profanity anywhere served:** page, CSS, share card, file names. Google Ads rejects it and requires the shown domain to match the landing page

@@ -7,7 +7,7 @@
               loads js/site.min.js; run tools/build.sh after editing this.
   @author     mediaBrilliance digitalxtudio
   @version    0.1.0
-  @updated    2026-10-18
+  @updated    2026-10-21
   ============================================================================
 */
 
@@ -30,9 +30,13 @@ document.querySelectorAll('.reel').forEach(function (reel) {
     track.scrollBy({ left: left, behavior: still ? 'auto' : 'smooth' });
   }
   function tick() { if (!stopped && !held && !document.hidden) go(1); }
+  /* Button words come from data-* attributes on the Pause button, so /es/ can
+     carry its own; English is the fallback. */
   function setStopped(v) {
     stopped = v; if (!play) return; play.setAttribute('aria-pressed', String(v));
-    play.textContent = v ? 'Play' : 'Pause'; play.setAttribute('aria-label', v ? 'Play slides' : 'Pause slides');
+    var d = play.dataset;
+    play.textContent = v ? (d.play || 'Play') : (d.pause || 'Pause');
+    play.setAttribute('aria-label', v ? (d.playLabel || 'Play slides') : (d.pauseLabel || 'Pause slides'));
   }
   setStopped(stopped);
   timer = setInterval(tick, 6000);
