@@ -222,3 +222,15 @@ All four U.S. House races are now in the ballot section. Sourcing them exposed a
 
 - One government list is a source, not a census. Before treating any list as complete, compare it with a second list that must carry the same races; a single county's file dropped four candidates while looking authoritative
 - The morning's CLAUDE.md note said "No third-party candidate appears statewide on that list," which was true of the list and false of the ballot. Write what the source shows as a claim about the source
+
+### 2026-10-21 - Phone text and tap targets for an older audience
+
+Google Ads demographics for Oct. 14-20 put 62 percent of impressions at age 55 and up (41 percent at 65+) and 91 percent of clicks on phones. A Firefox Developer Edition audit at 360 and 390 wide, GA blocked, found body text at 17px but the carousel cut to 15.7px by its phone rule, carousel source lines at 12.8px, and the one link the funnel exists for, VoterView, a 76 by 21 word inside a sentence. The sticky "Vote Nov. 3" was 38px tall at 14.4px; "How to vote" in the date strip was 32px.
+
+- Vote section: four cards gain a full-width 48px button on phones only ("Find your polling place," "Find your county office," "Get the mail ballot application," "See accepted IDs"). The in-sentence links stay. The buttons point at voteks.org and sos.ks.gov inside `#vote`, so `vote_link_click` counts them with no script change
+- Header "Vote Nov. 3" on phones: 16px text, 44px tall. "How to vote" on phones: 45px tall
+- Carousel on phones: body text 0.98rem/0.95rem to 1rem, source lines 0.8rem to 0.875rem. Text under 16px fell from 43.5 to 25.1 percent of characters; what remains is source lines, dates and the footer
+- The phone rule's promise holds: heading, card and arrows still fit one screen, 567px against 615 available at 375x667 (was 555)
+- Desktop at 1280 measured identical before and after: every target size and the carousel height
+
+- When the "Get the mail ballot application" deadline passes Oct. 27, that card and its button change together
