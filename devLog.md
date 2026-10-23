@@ -246,3 +246,14 @@ Google Ads demographics for Oct. 14-20 put 62 percent of impressions at age 55 a
 - A number repeated by several outlets can still trace to a source nobody has read. "104 arrests" ran everywhere attributed to the U.S. Attorney's Office, and no release could be found; the page says "decenas," which the vice mayor said on the record
 - Same day, at Valdez's direction: the whole page moved from `usted` to `tú` and to plain local wording (133 replacements, each asserted to match exactly once or a stated number of times, file written only after all matched). The FAQ answers changed in the page and the JSON-LD together
 - A header button label that fits in English may not fit translated. "Vote el 3 de nov." ran to the viewport edge at 360 wide; "Cómo votar" fits. Measure every header label at the narrowest width per language
+
+## 2026-10-23 — Pre-General FEC numbers, both pages
+
+Marshall's Pre-General report (Oct. 1-14, filed Oct. 22) replaces the October Quarterly on `index.html` and `es/index.html`: cash on hand $809,806 ($810K), $5.92M spent since July 16; over his Senate term PACs and committees $2,910,495, individuals $3,298,320 (FEC cycle totals for 2022, 2024 and 2026, party committees excluded). The method checks out against the last update: the 2026-cycle totals rose by exactly this report's period amounts, $417,521.28 individual and $122,850 PAC. The by-state data is still FEC-processed only through July 15 ($2.47M itemized, $444,498 from Kansas, 18 percent), so those lines and their date stay.
+
+PACs went from 97 to 88 percent of individual giving, so "nearly as much" / "casi tanto" became "close behind" / "poco menos," and the item heading "PACs nearly match people" became "PACs close behind people." Stats checked in Firefox at 320, 390 and 1440 on both pages: no stat overflows.
+
+### Mistakes → Rules
+
+- **A comparison word is a claim about a ratio, and the ratio moves with every report.** "Nearly as much" was true at 97 percent and loose at 88. When the numbers update, re-derive every adjective that describes them, not just the figures
+- **Pre-existing, not new:** `es/index.html` scrolls 1px sideways at 320px because the Spanish vote button renders 5px wider than the screen. Confirmed against a `git archive` of HEAD before this change. Logged as its own fix
