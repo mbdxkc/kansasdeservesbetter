@@ -6,7 +6,7 @@
   @desc       One page, mobile first. Breakpoints at 600 and 900 px.
   @author     mediaBrilliance digitalxtudio
   @version    0.1.0
-  @updated    2026-10-14
+  @updated    2026-10-23
   ============================================================================
 */
 
@@ -81,6 +81,15 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; t
   .nav a:not(.vote) { display: none; }
   .nav a.vote { font-size: 1rem; padding: .875rem .5rem; }  /* 44px tap target */
 }
+/* Under 360px the site name and the vote button did not both fit: the button ran
+   past the nav's scroll box and lost 7px (English) to 13px (Spanish). A smaller
+   name, a tighter gap and narrower side padding free about 34px; the button
+   keeps its 44px height. */
+@media (max-width: 359px) {
+  .site-header .wrap { gap: .5rem; }
+  .mark { font-size: .95rem; }
+  .nav a.vote { padding-left: .25rem; padding-right: .25rem; }
+}
 
 /* -------------------------------------------------------------------- hero */
 .hero { padding: clamp(1rem, 6vh, 4.5rem) 0 clamp(1.5rem, 5vh, 3.5rem); border-bottom: 1px solid var(--line); }
@@ -111,6 +120,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; t
 .stat { background: var(--bg); padding: 1.25rem 1rem; }
 .stat b { display: block; font: 700 clamp(2.4rem, 7vw, 3.6rem)/1 var(--display); color: var(--accent); }
 .stat span { display: block; margin-top: .5rem; color: var(--muted); font-size: .95rem; line-height: 1.35; }
+/* A figure with a long word ("$75 mil millones" on /es/) sets its column's minimum
+   width; at full size "millones" is 132px against a 110px box at 320 wide, which
+   pushed the grid a pixel past the screen. Smaller, it fits at every width. */
+.stat b.stat-long { font-size: clamp(1.9rem, 5.5vw, 3.2rem); }
 
 /* items: one claim, one source */
 .items { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }

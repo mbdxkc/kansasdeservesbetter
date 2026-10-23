@@ -257,3 +257,13 @@ PACs went from 97 to 88 percent of individual giving, so "nearly as much" / "cas
 
 - **A comparison word is a claim about a ratio, and the ratio moves with every report.** "Nearly as much" was true at 97 percent and loose at 88. When the numbers update, re-derive every adjective that describes them, not just the figures
 - **Pre-existing, not new:** `es/index.html` scrolls 1px sideways at 320px because the Spanish vote button renders 5px wider than the screen. Confirmed against a `git archive` of HEAD before this change. Logged as its own fix
+
+## 2026-10-23 — Narrow phones: a clipped vote button and a long Spanish figure
+
+The 1px sideways scroll on `/es/` at 320px had two causes, neither the one first blamed. The page width came from the ICE stats grid: "$75 mil millones" at the stat size made "millones" 132px wide against a 110px box, so its column claimed its min-content width and pushed the right column out. A `stat-long` class sets that one figure smaller (`clamp(1.9rem, 5.5vw, 3.2rem)`), and the four boxes are equal again. Separately, under 360px the header never fit: the vote button ran past the nav's scroll box and lost 7px in English and 13px in Spanish, invisible to a page-width check because the nav clips rather than scrolls the page. Under 360px the site name drops to .95rem, the header gap to .5rem and the button's side padding to .25rem, keeping its 44px height. Measured in Firefox at 320, 360, 390, 768, 1000 and 1440 on both pages: page width equals the screen and the button is fully inside the nav at every one.
+
+### Mistakes → Rules
+
+- **A clipped element inside an `overflow-x: auto` box does not widen the page.** The page-width check passed while the vote button lost 13px; measure the element against its scrolling parent, not only `scrollWidth` against the screen
+- **Name the overflowing element before fixing it.** The first fix went to the vote button because it was the first element listed past the edge; the pixel actually came from a stat grid further down. One scan that skips elements inside scroll containers named it
+- **A translated figure can be wider than the English one in ways the layout never saw.** "$75 mil millones" exists only on `/es/`; the English page has nothing at that size with a word that long
