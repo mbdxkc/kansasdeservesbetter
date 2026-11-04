@@ -1,8 +1,12 @@
 # kansasdeservesbetter/CLAUDE.md
-> The full sourced record of Sen. Roger Marshall, Kansas Senate race, Nov. 3, 2026
+> Kansas results from Nov. 3, 2026, and the full sourced record of Sen. Roger Marshall at /2026/ and /es/
 > Deploy: GitHub Pages from `main` (mbdxkc/kansasdeservesbetter), https://kansasdeservesbetter.com
 
 ## What this site is
+
+**Since Nov. 3, 2026:** Adam Hamilton won. `/` is the results page, and the record moved to `/2026/` (English) and stays at `/es/` (Spanish). Both are frozen on `2026/style.min.css` and `2026/site.min.js`, sharing `images/` and `fonts/`; `tools/build.sh` touches neither. Their only edits were the path changes and an archive strip above the header. The rest of this file's record, ICE, voting and ballot sections describe those archived pages.
+
+**Results page:** `tools/results.py` writes `index.html` from `tools/index.template.html` and NBC News' race pages, so edit the template, never `index.html`. Treasurer and insurance commissioner are typed in the script from WIBW because NBC does not list them. Write "NBC News projects" only where NBC's `callStatusCode` is `P`, and leave a race uncalled until a source calls it. Every count carries its as-of time and "unofficial" until certified. Run `tools/results.py`, then `tools/build.sh`. `og.png` comes from `tools/og.html`; the old card's source is `tools/og-2026.html`.
 
 Since 2026-10-06 this is the only live site. It carries the full record (18-slide carousel, nine patient cases, votes, words, money, FAQ, voting dates) in a clean voice. fuckrogermarshall.com was retired that day and forwards here (301, Squarespace domain forwarding); its repo stays for history only. It is also the Google Ads landing page, and is expected to grow into a broader civic project after the election.
 
@@ -26,11 +30,11 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 ## Spanish edition (/es/)
 
-- Added 2026-10-21: `es/index.html` is the full page in Spanish plus one section the English page does not carry, **ICE en Kansas** (`#ice`), after the patients. It loads the same `style.min.css`, `js/site.min.js`, font and images through `../`; `tools/build.sh` stamps both pages
+- Added 2026-10-21: `es/index.html` is the full page in Spanish plus one section the English page does not carry, **ICE en Kansas** (`#ice`), after the patients. It loads `2026/style.min.css`, `2026/site.min.js`, the font and images through `../`
 - **Every edit to the English record is an edit to the Spanish one.** The two pages share no markup, so a corrected number, date or source has to be made twice. Grep `es/index.html` for the same claim before committing
 - Quotes are translated and the footer says so; source links stay to the English originals. Voice: `tú`, never `usted`, in plain everyday Spanish as spoken in southwest Kansas (Valdez, Oct. 21, 2026): "clínica" not "consultorio," "la gran ley de gastos" not "megaley," "el seguro de Obamacare" not "créditos fiscales para las primas." Simpler words never loosen a record rule: "a 81 los arrestaron después de faltar a la corte" keeps the qualifier. US number format ($2,787,645), Spanish dates (3 de noviembre de 2026). The FEC-style disclaimer appears in Spanish and again in English
-- Each page links to the other on its own line under the kicker, with `hreflang` alternates in both heads and in `sitemap.xml`. The Pause button takes its Spanish words from `data-*` attributes; `js/site.js` falls back to English
-- `og.png` is English-only; the Spanish page reuses it
+- Each page links to the other on its own line under the kicker, with `hreflang` alternates in both heads and in `sitemap.xml`. The Pause button takes its Spanish words from `data-*` attributes; `2026/site.js` falls back to English
+- `2026/og.png` is English-only; the Spanish page reuses it
 
 ## ICE section rules
 
@@ -62,8 +66,8 @@ Marshall's lawyers sent a cease-and-desist over an opponent's ad on Sept. 30, 20
 
 ## Site
 
-- **Build:** index.html loads `style.min.css` and `js/site.min.js`. Edit `style.css` and `js/site.js`, then run `tools/build.sh`, which minifies both and stamps their URLs with an 8-hex SHA-256 (`--check` to verify). An unbuilt source edit ships as a no-op. Only the Google tag and the JSON-LD stay inline
-- One page. The only JavaScript (`js/site.js`) drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected). A second small listener sends the `vote_link_click` Analytics event when a Vote-section link to voteks.org or sos.ks.gov is clicked (source citations excluded). It is reporting only. The campaign has no conversion goals: it bids Maximize clicks and is judged on clicks, so zero conversions in Ads reports is expected, not a broken tag (confirmed 2026-10-18). `gtag('config', 'AW-18498605429')` sits in the existing gtag block; never add a second gtag.js script tag
+- **Build:** index.html loads `style.min.css`. Edit `style.css`, then run `tools/build.sh`, which minifies it and stamps its URL with an 8-hex SHA-256 (`--check` to verify). An unbuilt source edit ships as a no-op. Only the Google tag and the JSON-LD stay inline
+- The only JavaScript (`2026/site.js`, on the archived pages) drives the two carousels (arrows, keyboard, mouse drag; only the top one autoplays, with pause and reduced-motion respected). A second small listener sends the `vote_link_click` Analytics event when a Vote-section link to voteks.org or sos.ks.gov is clicked (source citations excluded). It is reporting only. The campaign has no conversion goals: it bids Maximize clicks and is judged on clicks, so zero conversions in Ads reports is expected, not a broken tag (confirmed 2026-10-18). `gtag('config', 'AW-18498605429')` sits in the existing gtag block; never add a second gtag.js script tag
 - Photos are public domain only (U.S. Senate, USDA), credited on each slide. Never news-agency or image-search photos
 - Hero sized by screen height and width so headline, intro and "Make a plan to vote" fit the first screen; re-measure after any hero copy change
 - Self-hosted Oswald. The one third-party script is the Google tag: GA4 `G-SFSM1D23NT` (added 2026-10-15) and Google Ads `AW-18498605429` (added 2026-10-16), which set `_ga` and Google Ads cookies; the footer says "Uses Google Analytics and Google Ads to count visits." Never reinstate a "no cookies" or "no tracking" claim while the tag ships

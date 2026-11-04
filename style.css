@@ -3,10 +3,11 @@
   kansasdeservesbetter.com
   ============================================================================
   @file       style.css
-  @desc       One page, mobile first. Breakpoints at 600 and 900 px.
+  @desc       The results home page, mobile first. The 2026 record keeps its
+              own frozen stylesheet in 2026/.
   @author     mediaBrilliance digitalxtudio
-  @version    0.1.0
-  @updated    2026-10-23
+  @version    0.2.0
+  @updated    2026-11-03
   ============================================================================
 */
 
@@ -67,100 +68,61 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; t
   border-bottom: 1px solid var(--line);
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 3.25rem; }
-.mark { font: 700 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .02em; color: var(--text); text-decoration: none; white-space: nowrap; padding: .75rem 0; }  /* 24px+ tap target */
+.mark { font: 700 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .02em; color: var(--text); text-decoration: none; white-space: nowrap; padding: .75rem 0; }
 .mark span { color: var(--accent); }
-.nav { display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; }
-.nav::-webkit-scrollbar { display: none; }
 .nav a {
-  font: 500 .9rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em;
-  color: var(--muted); text-decoration: none; padding: .75rem .5rem; white-space: nowrap;
+  display: block; font: 500 1rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em;
+  color: var(--accent); text-decoration: none; padding: .875rem .25rem; white-space: nowrap;  /* 44px tap target */
 }
 .nav a:hover { color: var(--text); }
-.nav a.vote { color: var(--accent); }
-@media (max-width: 599px) {
-  .nav a:not(.vote) { display: none; }
-  .nav a.vote { font-size: 1rem; padding: .875rem .5rem; }  /* 44px tap target */
-}
-/* Under 360px the site name and the vote button did not both fit: the button ran
-   past the nav's scroll box and lost 7px (English) to 13px (Spanish). A smaller
-   name, a tighter gap and narrower side padding free about 34px; the button
-   keeps its 44px height. */
-@media (max-width: 359px) {
-  .site-header .wrap { gap: .5rem; }
-  .mark { font-size: .95rem; }
-  .nav a.vote { padding-left: .25rem; padding-right: .25rem; }
-}
 
 /* -------------------------------------------------------------------- hero */
-.hero { padding: clamp(1rem, 6vh, 4.5rem) 0 clamp(1.5rem, 5vh, 3.5rem); border-bottom: 1px solid var(--line); }
+.hero { padding: clamp(1.5rem, 6vh, 4.5rem) 0 clamp(2rem, 6vh, 4rem); border-bottom: 1px solid var(--line); }
 .kicker { font: 500 .95rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin: 0 0 clamp(.6rem, 2vh, 1rem); }
-/* sized by width AND height so the whole hero, CTA included, fits the first screen */
-/* the other-language link sits on its own line under the kicker; negative margins
-   give it a 44px tap area without adding that height to the hero */
-.kicker .lang { display: block; width: fit-content; margin: -.8rem 0; padding: calc(.8rem + .35rem) 0 .8rem; color: var(--text); }
-.hero h1 { font-size: clamp(2rem, min(9vw, 8.2vh), 6.5rem); max-width: 16ch; text-wrap: balance; }
-.hero h1 em { font-style: normal; color: var(--accent); }
-.lede { font-size: clamp(1rem, min(2.4vw, 2.6vh), 1.35rem); line-height: 1.5; max-width: 40rem; margin: clamp(.75rem, 2.4vh, 1.5rem) 0 clamp(1rem, 3vh, 2rem); color: var(--text); }
-.cta {
-  display: inline-block; background: var(--accent); color: var(--accent-ink);
-  font: 700 1.1rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em;
-  text-decoration: none; padding: 1rem 1.5rem; border-radius: 2px;
-}
-.cta:hover { background: #fff; }
+.hero h1 { font-size: clamp(3.25rem, min(15vw, 20vh), 10rem); line-height: .98; color: var(--accent); }
+.lede { font-size: clamp(1.1rem, min(2.6vw, 3vh), 1.5rem); line-height: 1.45; max-width: 44rem; margin: clamp(.9rem, 2.6vh, 1.5rem) 0 .6rem; }
+.src { font-size: .9rem; color: var(--muted); }
+.src a { color: var(--muted); }
+.src a:hover { color: var(--accent); }
+.cite { margin: 0; }
+
+/* the Senate count */
+.tally { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: clamp(1.25rem, 4vh, 2.5rem) 0 .75rem; padding: 0; }
+.tally li { background: var(--bg); padding: 1rem .75rem; min-width: 0; }
+.tally .who { display: block; font: 700 clamp(1rem, 3.4vw, 1.4rem)/1.1 var(--display); text-transform: uppercase; }
+.tally .pct { display: block; font: 700 clamp(1.5rem, 7.5vw, 4rem)/1 var(--display); margin: .4rem 0; }
+.tally .n { display: block; color: var(--muted); font-size: .9rem; line-height: 1.3; }
+.tally .won .who, .tally .won .pct { color: var(--accent); }
 
 /* ---------------------------------------------------------------- sections */
 .section { padding: clamp(3rem, 8vw, 5.5rem) 0; border-bottom: 1px solid var(--line); }
 .section h2 { font-size: clamp(2rem, 6vw, 3.75rem); margin-bottom: 1.25rem; }
-.section > .wrap > p { max-width: 42rem; }
 .section-intro { color: var(--muted); font-size: 1.1rem; max-width: 42rem; margin: 0 0 2.5rem; }
 
-/* stats: the numbers carry the argument */
-.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 0 2.5rem; }
-@media (min-width: 900px) { .stats { grid-template-columns: repeat(4, 1fr); } }
-.stat { background: var(--bg); padding: 1.25rem 1rem; }
-.stat b { display: block; font: 700 clamp(2.4rem, 7vw, 3.6rem)/1 var(--display); color: var(--accent); }
-.stat span { display: block; margin-top: .5rem; color: var(--muted); font-size: .95rem; line-height: 1.35; }
-/* A figure with a long word ("$75 mil millones" on /es/) sets its column's minimum
-   width; at full size "millones" is 132px against a 110px box at 320 wide, which
-   pushed the grid a pixel past the screen. Smaller, it fits at every width. */
-.stat b.stat-long { font-size: clamp(1.9rem, 5.5vw, 3.2rem); }
+/* one card per race */
+.races { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (min-width: 700px) { .races { grid-template-columns: 1fr 1fr; } }
+.race { background: var(--bg); padding: 1.25rem; min-width: 0; }
+.race h3 { font-size: 1.5rem; margin-bottom: .35rem; }
+.race .call { font: 500 .95rem/1.25 var(--display); text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 .75rem; }
+.race .call.done { color: var(--accent); }
+.race .q { margin: 0 0 .75rem; font-size: .95rem; line-height: 1.45; }
+.race table { width: 100%; border-collapse: collapse; margin: 0 0 .75rem; }
+.race th, .race td { padding: .4rem 0; border-top: 1px solid var(--line); font-weight: 400; text-align: right; vertical-align: top; line-height: 1.3; }
+.race th[scope="row"] { text-align: left; padding-right: .75rem; }
+.race td { padding-left: .75rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.race .won th, .race .won td { color: var(--accent); font-weight: 700; }
+.race .src { margin: 0; }
 
-/* items: one claim, one source */
-.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-@media (min-width: 900px) {
-  .items { grid-template-columns: 1fr 1fr; }
-  .item:last-child:nth-child(odd) { grid-column: 1 / -1; }  /* no empty cell when the count is odd */
+/* ------------------------------------------------------------------ record */
+.cta {
+  display: inline-block; background: var(--accent); color: var(--accent-ink);
+  font: 700 1.1rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em;
+  text-decoration: none; padding: 1rem 1.5rem; border-radius: 2px; margin: 0 1rem .75rem 0;
 }
-.item { background: var(--bg); padding: 1.5rem 1.25rem; }
-.item h3 { font-size: clamp(1.35rem, 3vw, 1.65rem); margin-bottom: .6rem; }
-.item p { margin: 0 0 .75rem; }
-.item .when { font-size: .9rem; color: var(--muted); margin-bottom: .4rem; }
-.src { font-size: .9rem; color: var(--muted); }
-.src a { color: var(--muted); }
-.src a:hover { color: var(--accent); }
-
-blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(--accent); font-size: 1.15rem; }
-
-/* the patient story */
-.story { background: var(--panel); border: 1px solid var(--line); padding: 1.5rem 1.25rem; margin: 0 0 2.5rem; max-width: 46rem; }
-.story h3 { font-size: 1.5rem; margin-bottom: .75rem; }
-.story p { margin: 0 0 .9rem; }
-.story p:last-child { margin-bottom: 0; }
-
-/* ------------------------------------------------------------------- vote */
-.vote-list { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-@media (min-width: 600px) { .vote-list { grid-template-columns: 1fr 1fr; } }
-.vote-list li { background: var(--bg); padding: 1.25rem; }
-.vote-list b { display: block; font: 700 1.5rem/1.1 var(--display); text-transform: uppercase; color: var(--accent); margin-bottom: .35rem; }
-/* phones: each voter tool also gets a full-width button, since a one-word link is hard to tap */
-.vote-list .act { display: none; }
-@media (max-width: 599px) {
-  .vote-list .act {
-    display: flex; align-items: center; justify-content: center; min-height: 3rem; margin-top: 1rem; padding: .5rem 1rem;
-    background: var(--accent); color: var(--accent-ink); border-radius: 2px; text-align: center; text-decoration: none;
-    font: 700 1rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .04em;
-  }
-}
+.cta:hover { background: #fff; }
+.record p { max-width: 42rem; margin: 0 0 1.5rem; }
+.lang { display: inline-block; padding: .65rem 0; color: var(--text); }  /* 44px tap target */
 
 /* ----------------------------------------------------------------- footer */
 .site-footer { padding: 2.5rem 0 3rem; color: var(--muted); font-size: .9rem; text-align: center; }
@@ -171,7 +133,6 @@ blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(
   .foot-line span { display: block; }
 }
 .site-footer a { color: var(--muted); display: inline-block; padding: .2rem 0; }
-
 /* studio credit, same as the other mediaBrilliance builds */
 .credit { margin: 1.4rem 0 0; font-size: .75rem; letter-spacing: .02em; }
 .site-footer .credit a { display: inline-flex; align-items: center; gap: .4rem; margin-left: .2rem;
@@ -179,129 +140,6 @@ blockquote { margin: 0 0 .75rem; padding-left: 1rem; border-left: 4px solid var(
 .credit img { display: block; width: auto; height: 1em; }
 .site-footer .credit a:hover, .site-footer .credit a:focus-visible { color: var(--accent); }
 
-/* citations under a claim block, and the patients' quotes */
-.cite { margin: calc(-1 * clamp(.5rem, 2vh, 1rem)) 0 clamp(1rem, 3vh, 2rem); }
-.stats-src { margin: -1.75rem 0 2.5rem; }
-.voices { max-width: 46rem; margin: 0 0 2.5rem; }
-.voices h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-.voices blockquote { margin-bottom: 1rem; }
-.voices p { margin: 0 0 .9rem; }
 
-
-/* short answers: one question per block */
-.faq { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-@media (min-width: 900px) {
-  .faq { grid-template-columns: 1fr 1fr; }
-  .qa:last-child:nth-child(odd) { grid-column: 1 / -1; }  /* no empty cell when the count is odd */
-}
-.qa { background: var(--bg); padding: 1.5rem 1.25rem; }
-.qa h3 { font-size: clamp(1.2rem, 2.6vw, 1.4rem); text-transform: none; margin-bottom: .6rem; }
-.qa p { margin: 0 0 .75rem; }
-
-/* the reel: photos and quotes, one fact per slide, swipe or arrow through */
-.reel-track {
-  list-style: none; margin: 0; padding: 0 0 1rem;
-  display: grid; grid-auto-flow: column; grid-auto-columns: 88%; column-gap: 1rem;
-  overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
-  scrollbar-color: var(--accent) var(--line);
-}
-@media (min-width: 600px) { .reel-track { grid-auto-columns: 70%; } }
-@media (min-width: 900px) { .reel-track { grid-auto-columns: calc((100% - 1rem) / 2); } }
-.slide {
-  scroll-snap-align: start; background: var(--panel); border: 1px solid var(--line);
-  display: flex; flex-direction: column; min-height: 100%;
-}
-.slide img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.slide-text { margin: 0; padding: 1.1rem 1.25rem .5rem; font-size: 1.1rem; }
-.slide .src { margin: auto 0 0; padding: .5rem 1.25rem 1.1rem; }
-.slide-quote { padding: 1.5rem 1.25rem 0; justify-content: flex-start; }
-.slide-quote blockquote {
-  border: 0; padding: 0; margin: 0 0 1rem;
-  font: 700 clamp(1.6rem, 4.6vw, 2.4rem)/1.1 var(--display); text-transform: uppercase; color: var(--accent);
-}
-.slide-who { margin: 0 0 1rem; color: var(--text); }
-.slide-quote .src { padding-left: 0; padding-right: 0; }
-.reel-nav { display: flex; align-items: center; gap: 1rem; margin-top: .75rem; }
-.reel-btn {
-  font: 700 1.25rem/1 var(--display); color: var(--accent-ink); background: var(--accent);
-  border: 0; border-radius: 2px; min-width: 3rem; min-height: 3rem; cursor: pointer;
-}
-.reel-btn:hover { background: #fff; }
-.reel-count { color: var(--muted); font-size: .95rem; min-width: 4.5rem; text-align: center; }
-
-/* number slides */
-.slide-stat { padding: 1.5rem 1.25rem 0; }
-.slide-stat b { display: block; font: 700 clamp(3.4rem, 11vw, 5.5rem)/1 var(--display); color: var(--accent); margin-bottom: .75rem; }
-.slide-stat .src { padding-left: 0; padding-right: 0; }
-.reel-play { font-size: .95rem; text-transform: uppercase; letter-spacing: .04em; padding: 0 .9rem; }
-
-
-/* the patients: one case per slide */
-.reel-cases { margin: 0 0 2.5rem; }
-.slide-case { padding: 1.25rem; }
-.slide-case > b { display: block; font: 700 clamp(2.8rem, 9vw, 4.5rem)/.9 var(--display); color: var(--accent); margin-bottom: .6rem; }
-.slide-case h3 { font-size: clamp(1.3rem, 3vw, 1.6rem); margin-bottom: .6rem; }
-.slide-case p { margin: 0 0 .9rem; }
-.slide-case blockquote { font-size: 1.05rem; }
-.slide-case .src { padding: 0; margin: auto 0 0; }
-.sum { margin: 0 0 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.sum div { margin: 0; }
-.sum dt { font: 700 clamp(2.2rem, 7vw, 3rem)/1 var(--display); color: var(--accent); }
-.sum dd { margin: .3rem 0 0; color: var(--muted); font-size: .95rem; line-height: 1.35; }
-
-/* key dates, right under the hero, for readers who never reach the vote section */
-.strip { background: var(--accent); color: var(--accent-ink); }
-.strip p { margin: 0; padding: .9rem 0; display: flex; flex-wrap: wrap; gap: .35rem 1.5rem; align-items: center; font: 500 1rem/1.3 var(--display); text-transform: uppercase; letter-spacing: .03em; }
-.strip b { font-weight: 700; }
-.strip a { color: var(--accent-ink); font-weight: 700; margin-left: auto; text-decoration-thickness: 2px; padding: .35rem 0; }
-@media (max-width: 599px) { .strip a { margin-left: 0; display: inline-block; padding: .75rem 0; } }  /* 44px tap target */
-
-/* the remaining votes, one tap away */
-.more { margin-top: 1px; }
-.more summary {
-  cursor: pointer; list-style: none; display: inline-block; margin: 1.25rem 0 0;
-  font: 700 1.05rem/1 var(--display); text-transform: uppercase; letter-spacing: .04em;
-  color: var(--accent-ink); background: var(--accent); padding: .9rem 1.25rem; border-radius: 2px;
-}
-.more summary::-webkit-details-marker { display: none; }
-.more summary:hover { background: #fff; }
-.more[open] summary { display: none; }
-.more .items { margin-top: 0; border-top: 0; }
-
-/* mouse drag on the carousels */
-.reel-track { cursor: grab; }
-.reel-track.dragging { cursor: grabbing; user-select: none; }
-
-/* combined slides */
-.slide-multi .sum { grid-template-columns: 1fr; gap: 1.1rem; margin: 0 0 1rem; }
-.slide-multi .sum dt { font-size: clamp(2.6rem, 8vw, 3.6rem); }
-.slide-quote blockquote + blockquote { margin-top: -.25rem; font-size: clamp(1.2rem, 3vw, 1.5rem); }
-.slide-bq { margin: 0 1.25rem .5rem; font-size: 1.05rem; }
-
-/* phones: heading, card and arrows fit on one screen. Cards share the tallest
-   slide's height, so the tall photo slides set the budget */
-@media (max-width: 599px) {
-  .reel-section { padding-top: 2rem; padding-bottom: 2rem; }
-  .reel-section h2 { font-size: 1.6rem; margin-bottom: .75rem; }
-  .reel-track { padding-bottom: .5rem; }
-  .slide img { aspect-ratio: 2 / 1; }
-  .slide-text { padding: .75rem 1rem .35rem; font-size: 1rem; line-height: 1.45; }
-  .slide .src { padding: .35rem 1rem .8rem; font-size: .875rem; line-height: 1.4; }
-  .slide-quote, .slide-stat { padding: 1rem 1rem 0; }
-  .slide-quote blockquote { font-size: 1.45rem; margin-bottom: .6rem; }
-  .slide-quote blockquote + blockquote { font-size: 1.1rem; }
-  .slide-who { margin-bottom: .6rem; font-size: 1rem; line-height: 1.45; }
-  .slide-stat b { font-size: 3rem; margin-bottom: .4rem; }
-  .slide-multi .sum { gap: .6rem; margin-bottom: .6rem; }
-  .slide-multi .sum dt { font-size: 2.3rem; }
-  .slide-bq { margin: 0 1rem .35rem; font-size: 1rem; }
-  .slide-case { padding: 1rem; }
-  .slide-case > b { font-size: 2.4rem; margin-bottom: .35rem; }
-  .slide-case h3 { font-size: 1.2rem; margin-bottom: .4rem; }
-  .slide-case p { margin-bottom: .6rem; font-size: 1rem; line-height: 1.45; }
-  .slide-case blockquote { font-size: 1rem; margin-bottom: .6rem; }
-  .slide-case .src { font-size: .875rem; }
-  .reel-nav { margin-top: .5rem; gap: .75rem; }
-  .reel-btn { min-width: 2.75rem; min-height: 2.75rem; }
-  .slide-quote .src, .slide-stat .src { padding-left: 0; padding-right: 0; }  /* line up with the quote */
-}
+/* column headings for screen readers only: the numbers read plainly on screen */
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

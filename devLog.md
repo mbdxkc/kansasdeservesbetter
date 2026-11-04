@@ -267,3 +267,15 @@ The 1px sideways scroll on `/es/` at 320px had two causes, neither the one first
 - **A clipped element inside an `overflow-x: auto` box does not widen the page.** The page-width check passed while the vote button lost 13px; measure the element against its scrolling parent, not only `scrollWidth` against the screen
 - **Name the overflowing element before fixing it.** The first fix went to the vote button because it was the first element listed past the edge; the pixel actually came from a stat grid further down. One scan that skips elements inside scroll containers named it
 - **A translated figure can be wider than the English one in ways the layout never saw.** "$75 mil millones" exists only on `/es/`; the English page has nothing at that size with a word that long
+
+## 2026-11-03 — Hamilton wins: results home page, record moved to /2026/
+
+The Associated Press called the race for Adam Hamilton. `/` is now a results page: Senate first, then every statewide race, the four U.S. House races and the amendment. The record moved to `/2026/`, frozen on its own stylesheet and script with an archive strip and a link home. `/es/` keeps its URL, loads the frozen files and gains the same strip. `tools/build.sh` now handles only the home stylesheet.
+
+Counts come from the JSON NBC News embeds in each race page, including its call status, because a summarizing fetch reported no projection on races NBC had in fact projected. NBC does not list treasurer or insurance commissioner, so WIBW supplies those. Firefox Developer Edition, GA blocked, at 320 to 1440 wide on all three pages: no horizontal overflow, Oswald loaded, every asset 200.
+
+### Mistakes → Rules
+
+- **Read a results page's data, not a summary of its page.** The readable text of NBC's pages showed no call on Senate or the House. The embedded `callStatusCode` showed four projected, one with no call and three too early. A call is a field, so read the field
+- **A results page goes stale on a clock.** Each count carries its as-of time and "unofficial," and only sourced calls get marked as won. A leader in a close race is not a winner
+- **Moving a page moves everything its relative paths assumed.** The frozen stylesheet's font URL resolves against the stylesheet, so copying it into `2026/` needed `../fonts/` even though the page's own links had already been fixed

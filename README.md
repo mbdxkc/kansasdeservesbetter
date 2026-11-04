@@ -1,6 +1,6 @@
 # kansasdeservesbetter
 
-The public record of U.S. Sen. Roger Marshall (R-Kan.), sourced line by line, and how Kansans vote on Nov. 3, 2026. The only live site since Oct. 6, 2026 (the earlier domain forwards here) and the landing page for paid ads.
+Kansas results from the Nov. 3, 2026 election, and the public record of U.S. Sen. Roger Marshall (R-Kan.) that ran before it, sourced line by line.
 
 **by mediaBrilliance.io**
 
@@ -10,23 +10,24 @@ The public record of U.S. Sen. Roger Marshall (R-Kan.), sourced line by line, an
 
 ```
 /
-├── index.html      # Hero, dates strip, 18-slide carousel, patient cases, votes, words, money, FAQ, vote dates
-├── style.css       # Mobile first; breakpoints 600 and 900 (source)
+├── index.html      # Results home page, written by tools/results.py
+├── style.css       # Mobile first (source)
 ├── style.min.css   # What the page loads; built by tools/build.sh
-├── js/site.js      # Carousels and the Vote-link event (source; page loads site.min.js)
+├── 2026/           # The record through Election Day, frozen with its own CSS, script and share card
+├── es/             # The same record in Spanish, frozen on 2026/'s CSS and script
 ├── fonts/          # Oswald (SIL OFL), latin subset, self-hosted
 ├── images/         # Public-domain photos (WebP 640 and 1200), studio mark
 ├── og.png          # Share card, built from tools/og.html
 ├── favicon.svg, robots.txt, sitemap.xml
-├── tools/          # build.sh, og.html (not published)
+├── tools/          # build.sh, results.py, index.template.html, og sources (not published)
 └── _config.yml     # Keeps internal files off GitHub Pages
 ```
 
-Google Analytics (GA4, `G-SFSM1D23NT`) counts visits and outbound source clicks. One small script, `js/site.js`, drives the carousels.
+Google Analytics (GA4, `G-SFSM1D23NT`) counts visits. The home page runs no other script.
 
 ## Build
 
-The page loads `style.min.css` and `js/site.min.js`. Run `tools/build.sh` after editing `style.css` or `js/site.js`, or the edit ships as a no-op. It minifies both and stamps each URL in `index.html` with the file's hash. `tools/build.sh --check` changes nothing and exits 1 when a build is stale.
+Edit `tools/index.template.html` and `style.css`, never `index.html`. `tools/results.py` pulls current counts and writes the page; `tools/build.sh` minifies the stylesheet and stamps its URL with the file's hash. `tools/build.sh --check` changes nothing and exits 1 when a build is stale.
 
 ## Deploy
 
