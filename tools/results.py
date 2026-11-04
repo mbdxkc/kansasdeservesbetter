@@ -38,8 +38,8 @@ RACES = [
     ("Constitutional amendment", "kansas-ballot-measures"),
 ]
 WIBW_RACES = {
-    "State treasurer": (93.4, [("Steven Johnson, Republican", 539553), ("Juan C. Luengo, Democrat", 472359), ("Eric Lund, Libertarian", 48038)]),
-    "Insurance commissioner": (93.7, [("Daniel Hawkins, Republican", 516419), ("Dinah Sykes, Democrat", 505112), ("Ric Koehn, Libertarian", 37561)]),
+    "State treasurer": (94.2, [("Steven Johnson, Republican", 546067), ("Juan C. Luengo, Democrat", 474352), ("Eric Lund, Libertarian", 48466)]),
+    "Insurance commissioner": (94.5, [("Daniel Hawkins, Republican", 522837), ("Dinah Sykes, Democrat", 507313), ("Ric Koehn, Libertarian", 37952)]),
 }
 
 
