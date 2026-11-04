@@ -4,7 +4,7 @@
 Run from the repo root, then run tools/build.sh. NBC's pages embed each race's
 counts, percent in and call status. It does not list treasurer or insurance
 commissioner, so those two are typed below from WIBW's results page; update
-them, and their calls, by hand. Stops on any candidate it does not recognize.
+them, and WIBW_CALLS, by hand. Stops on any candidate it does not recognize.
 """
 import datetime, email.utils, html, json, re, sys, urllib.request, zoneinfo
 
@@ -38,8 +38,13 @@ RACES = [
     ("Constitutional amendment", "kansas-ballot-measures"),
 ]
 WIBW_RACES = {
-    "State treasurer": (94.2, [("Steven Johnson, Republican", 546067), ("Juan C. Luengo, Democrat", 474352), ("Eric Lund, Libertarian", 48466)]),
-    "Insurance commissioner": (94.5, [("Daniel Hawkins, Republican", 522837), ("Dinah Sykes, Democrat", 507313), ("Ric Koehn, Libertarian", 37952)]),
+    "State treasurer": (98.5, [("Steven Johnson, Republican", 551643), ("Juan C. Luengo, Democrat", 475695), ("Eric Lund, Libertarian", 48797)]),
+    "Insurance commissioner": (98.5, [("Daniel Hawkins, Republican", 528004), ("Dinah Sykes, Democrat", 508889), ("Ric Koehn, Libertarian", 38498)]),
+}
+
+# Race -> winner's displayed name, call text, source name, source URL. Only a call a source has reported.
+WIBW_CALLS = {
+    "State treasurer": ("Steven Johnson, Republican", "KWCH reports: Steven Johnson wins", "KWCH", "https://www.kwch.com/2026/11/04/morning-after-election-day-where-things-stand/"),
 }
 
 
@@ -93,10 +98,11 @@ cards = []
 for title, slug in RACES:
     if slug is None:
         pct, typed = WIBW_RACES[title]
-        rs = [(n, v, False) for n, v in typed]
-        call, done = "Counting continues", False
+        called = WIBW_CALLS.get(title)
+        rs = [(n, v, bool(called and called[0] == n)) for n, v in typed]
+        call, done = (called[1], True) if called else ("Counting continues", False)
         pct_in = f"{pct}% reporting"
-        src = f'<a href="{WIBW}">WIBW</a>'
+        src = f'<a href="{WIBW}">WIBW</a>' + (f'; call: <a href="{called[3]}">{called[2]}</a>' if called else "")
     else:
         _, race = nbc(slug)
         rs = rows(race, title)
