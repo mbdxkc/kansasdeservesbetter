@@ -322,3 +322,13 @@ Audit, then fixes, all shipped: mobile Lighthouse performance was 94 with a 6.7 
 - **A header that grows by three letters needs the narrow-width measurements re-run.** "America Deserves a Speaker" left the full nav label 9 px from the edge at 400 px; the short-label breakpoint moved to 430 px
 - **Domain forwarding that may later become a real site should be a 302.** Browsers cache a 301 indefinitely, which would strand returning visitors when projectspeaker.org gets its own repo
 - **A chained `git pull && edit` silently skips the edit when the pull refuses.** The pull failed on unstaged changes and the thesis edit never ran, while the build afterwards reported success on the old page. Stash, pull, pop, then edit
+
+### Later: two more record items
+
+Medicare for All (item 7) and the GENIUS Act (item 8) join the record, both checked against primary data: GPO's bill-status XML for the cosponsor lists, the House clerk's roll call 200 for the vote. Leads that could not be confirmed (the 2021 Atlantic quote, Sludge's Anduril and Palantir figures) are logged in CLAUDE.md, not published.
+
+### Mistakes → Rules
+
+- **When congress.gov and GovTrack refuse fetchers, govinfo's BILLSTATUS XML has the same cosponsor data,** with join dates and an original-cosponsor flag: `govinfo.gov/bulkdata/BILLSTATUS/<congress>/hr/BILLSTATUS-<congress>hr<n>.xml`
+- **A shell loop that sets positional parameters to build a URL returned status 000 twice in one night,** for the Census geocoder and for govinfo, while the same request from Python worked. When a loop of curls fails uniformly, run one request outside the loop before suspecting the service
+- **The money data that is easy to find is not always the money data that helps.** His campaign's largest source is small donors ($8.1M unitemized this cycle); publishing the PAC total alone would invite exactly the correction the record rules exist to avoid
