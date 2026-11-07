@@ -174,9 +174,15 @@ body.speaker { background: #0d1b33; }
 .speaker .src a { color: var(--muted); }
 .speaker .src a:hover, .speaker main a:not(.cta):hover { color: var(--text); }
 .speaker .cta { background: var(--dem); color: #fff; border: 1px solid rgba(255, 255, 255, .6); border-radius: 999px; padding: 1rem 1.75rem; }
+/* The thesis line above the hero button: the display face at a size between
+   the lede and the headline, ivory with its last words in Capitol gold */
+.speaker .thesis { font: 700 clamp(1.6rem, 4.2vw, 2.6rem)/1.1 var(--display); text-transform: uppercase; letter-spacing: .01em;
+  max-width: 34ch; margin: 2rem 0 0; color: var(--text); text-wrap: balance; }
+.speaker .thesis span { color: var(--accent); }
+
 /* Hero button and its live signature count, kept together as one unit with
    one clear gap above. Side by side when there is room, stacked on phones. */
-.speaker .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin-top: 2rem; }
+.speaker .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin-top: 1.5rem; }
 .speaker .cta-row .cta { margin: 0; }
 .speaker .cta-row .src { margin: 0; max-width: 34rem; }
 .speaker .cta:hover { background: #fff; color: var(--bg); }
@@ -212,11 +218,11 @@ body.speaker { background: #0d1b33; }
   color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
 .rotor-pause:hover { color: var(--text); border-color: var(--muted); }
 
-/* Header on narrow phones: "America Deserves Better" plus "Sign the petition"
-   needs about 364px, wider than a 320-360px screen, so below 400px the nav
-   link shows only "Sign". " the petition" is hidden visually, not removed,
+/* Header on narrow phones: "America Deserves a Speaker" plus "Sign the petition"
+   needs about 400px plus margins, so below 430px the nav link shows only
+   "Sign". " the petition" is hidden visually, not removed,
    so the link is still announced (and voice-controllable) as "Sign the petition". */
-@media (max-width: 399px) {
+@media (max-width: 429px) {
   .speaker .nav-long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
 
