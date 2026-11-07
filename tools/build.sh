@@ -5,7 +5,7 @@
 # ============================================================================
 #   @file       tools/build.sh
 #   @author     mediaBrilliance digitalxtudio
-#   @updated    2026-11-03
+#   @updated    2026-11-07
 # ============================================================================
 #
 #   index.html and speaker/index.html load style.min.css. An edit to style.css ships as a no-op until

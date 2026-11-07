@@ -6,8 +6,8 @@
   @desc       The results home page, mobile first. The 2026 record keeps its
               own frozen stylesheet in 2026/.
   @author     mediaBrilliance digitalxtudio
-  @version    0.2.0
-  @updated    2026-11-03
+  @version    0.3.0
+  @updated    2026-11-07
   ============================================================================
 */
 
@@ -122,6 +122,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; t
 }
 .cta:hover { background: #fff; }
 .record p { max-width: 42rem; margin: 0 0 1.5rem; }
+.record .next { margin: 1.5rem 0 0; }  /* home page: the link to speaker/, below the record buttons */
 .lang { display: inline-block; padding: .65rem 0; color: var(--text); }  /* 44px tap target */
 
 /* ----------------------------------------------------------------- speaker */
@@ -200,6 +201,14 @@ body.speaker { background: #0d1b33; }
 */
 .speaker .hero h1 { color: var(--text); font-size: clamp(2.5rem, min(10vw, 12vh), 6.5rem); line-height: 1; }
 .rotor, .rotor-cap { display: grid; grid-template-columns: minmax(0, 1fr); }
+/* "Earmarked." starts at roughly its fitted size, so rotor.js only fine-tunes
+   it instead of doubling it on screen after the font loads. In Oswald 700 the
+   word is about 5.3 times as wide as its font size, so the column width
+   divided by 5.4 fills the line; cqi is the column's width. Capped at 2.5 times
+   the h1 size, the same ceiling rotor.js uses. Browsers without container
+   units keep the h1 size and rotor.js does all the sizing. */
+.rotor { container-type: inline-size; }
+.rotor > .rotor-line:first-child { font-size: min(calc(100cqi / 5.4), 2.5em); }
 /* The swap: the old line fades out and drops slightly, the new one fades in
    and rises into place. .5s must match CONFIG.fade in rotor.js, which waits
    for the fade-out to finish before showing the next line. */

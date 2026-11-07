@@ -8,7 +8,7 @@
               (#rotor-ref) change together, so a headline is never on screen
               with another headline's caption or source.
   @author     mediaBrilliance digitalxtudio
-  @version    0.1.0
+  @version    0.2.0
   @updated    2026-11-07
   @a11y       Pause button (WCAG 2.2.2), hover and focus hold the current line,
               reduced motion never rotates, screen readers always read line 1
@@ -23,7 +23,7 @@
   under the listener.
 
   ORDER
-  "Earmarked." opens every cycle. The other nine follow in a fresh random
+  "Earmarked." opens every cycle, and holds 10 seconds on first load. The other nine follow in a fresh random
   order, each shown once, then the cycle starts again with "Earmarked.".
 
   WHEN IT STOPS
@@ -43,6 +43,7 @@
   /** Timing and sizing. fade must equal the .5s transition on .rotor-line in style.css. */
   var CONFIG = {
     interval: 6000,   // ms each headline stays up
+    firstHold: 10000, // ms "Earmarked." holds on first load, before any motion
     fade: 500,        // ms to fade out before the next line fades in
     maxScale: 2.5,    // the most fit() will enlarge a line over the stylesheet size
     fitSteps: 12      // binary-search passes per line; 12 halvings is sub-pixel
@@ -167,12 +168,18 @@
 
   // Each tick shows the next line from the bag. When the bag is empty the
   // cycle is over: "Earmarked." (line 0) comes back and the bag refills.
-  setInterval(function () {
+  function tick() {
     if (paused || held || document.hidden) return;
     if (bag.length) { show(bag.pop()); return; }
     show(0);
     refill();
-  }, CONFIG.interval);
+  }
+  // The opening headline holds longer than the rest, so a first-time visitor
+  // reads it and the page has settled before anything moves.
+  setTimeout(function () {
+    tick();
+    setInterval(tick, CONFIG.interval);
+  }, CONFIG.firstHold);
 
   // Hold while someone is reading or about to follow the link.
   function hold() { held = true; }
