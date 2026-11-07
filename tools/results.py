@@ -38,13 +38,14 @@ RACES = [
     ("Constitutional amendment", "kansas-ballot-measures"),
 ]
 WIBW_RACES = {
-    "State treasurer": (98.5, [("Steven Johnson, Republican", 551643), ("Juan C. Luengo, Democrat", 475695), ("Eric Lund, Libertarian", 48797)]),
-    "Insurance commissioner": (98.5, [("Daniel Hawkins, Republican", 528004), ("Dinah Sykes, Democrat", 508889), ("Ric Koehn, Libertarian", 38498)]),
+    "State treasurer": (98.9, [("Steven Johnson, Republican", 554383), ("Juan C. Luengo, Democrat", 479827), ("Eric Lund, Libertarian", 49091)]),
+    "Insurance commissioner": (98.9, [("Daniel Hawkins, Republican", 530494), ("Dinah Sykes, Democrat", 513291), ("Ric Koehn, Libertarian", 38773)]),
 }
 
 # Race -> winner's displayed name, call text, source name, source URL. Only a call a source has reported.
 WIBW_CALLS = {
     "State treasurer": ("Steven Johnson, Republican", "KWCH reports: Steven Johnson wins", "KWCH", "https://www.kwch.com/2026/11/04/morning-after-election-day-where-things-stand/"),
+    "Insurance commissioner": ("Daniel Hawkins, Republican", "WIBW reports: Daniel Hawkins wins", "WIBW", WIBW),
 }
 
 
@@ -102,7 +103,7 @@ for title, slug in RACES:
         rs = [(n, v, bool(called and called[0] == n)) for n, v in typed]
         call, done = (called[1], True) if called else ("Counting continues", False)
         pct_in = f"{pct}% reporting"
-        src = f'<a href="{WIBW}">WIBW</a>' + (f'; call: <a href="{called[3]}">{called[2]}</a>' if called else "")
+        src = f'<a href="{WIBW}">WIBW</a>' + (f'; call: <a href="{called[3]}">{called[2]}</a>' if called and called[3] != WIBW else "")
     else:
         _, race = nbc(slug)
         rs = rows(race, title)
