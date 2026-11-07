@@ -33,7 +33,7 @@ Edit `tools/index.template.html` and `style.css`, never `index.html`. `tools/res
 
 ## Project Speaker (`speaker/`)
 
-Backs the change.org petition "House Democrats: CHOOSE A NEW SPEAKER." projectspeaker.org is reserved for it; until its DNS is set, the page lives at kansasdeservesbetter.com/speaker/.
+Backs the change.org petition "House Democrats: CHOOSE A NEW SPEAKER." projectspeaker.org forwards to kansasdeservesbetter.com/speaker/ (Squarespace domain forwarding, 302, `@` and `www`).
 
 - **The record:** six items, each with its source and his own explanation. Money comes from FEC filings, votes from clerk.house.gov, quotes from the outlet that published them.
 - **The hero rotates.** Ten headlines, each with a caption and a link to the record item behind it, change together every 6 seconds. "Earmarked." opens every cycle and the rest follow in random order. A Pause button, hover and keyboard focus stop it, and it stays still under reduced motion. One-line headlines are enlarged to fill the same space as two-line ones. All of it is in `speaker/rotor.js`, explained in its comments; the page loads `rotor.min.js`, which `tools/build.sh` builds from it. To add or change a headline, edit the matching line in both the headline list and the caption list in `speaker/index.html`; the two lists must stay in the same order.
