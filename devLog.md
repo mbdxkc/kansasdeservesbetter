@@ -332,3 +332,7 @@ Medicare for All (item 7) and the GENIUS Act (item 8) join the record, both chec
 - **When congress.gov and GovTrack refuse fetchers, govinfo's BILLSTATUS XML has the same cosponsor data,** with join dates and an original-cosponsor flag: `govinfo.gov/bulkdata/BILLSTATUS/<congress>/hr/BILLSTATUS-<congress>hr<n>.xml`
 - **A shell loop that sets positional parameters to build a URL returned status 000 twice in one night,** for the Census geocoder and for govinfo, while the same request from Python worked. When a loop of curls fails uniformly, run one request outside the loop before suspecting the service
 - **The money data that is easy to find is not always the money data that helps.** His campaign's largest source is small donors ($8.1M unitemized this cycle); publishing the PAC total alone would invite exactly the correction the record rules exist to avoid
+
+## 2026-11-07 — Project Speaker split into its own repo
+
+America Deserves a Speaker now lives in mbdxkc/projectspeaker, with the page at the root and every address on projectspeaker.org; it answers at https://mbdxkc.github.io/projectspeaker/ until DNS moves. This repo's `speaker/` is frozen for content and stays live only because projectspeaker.org still forwards here. The cutover order (forwarding rules out, GitHub Pages records in, CNAME, Enforce HTTPS, then `speaker/` out of this repo with a plain link from the home page) is in projectspeaker/CLAUDE.md. Both repos' hourly workflows run until then.

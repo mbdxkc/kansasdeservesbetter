@@ -33,6 +33,8 @@ Edit `tools/index.template.html` and `style.css`, never `index.html`. `tools/res
 
 ## Project Speaker (`speaker/`)
 
+**Moved to its own repo, [mbdxkc/projectspeaker](https://github.com/mbdxkc/projectspeaker), on Nov. 7, 2026.** Edit it there. This copy stays until projectspeaker.org's DNS points at the new repo, then `speaker/` comes out of this one.
+
 Backs the change.org petition "House Democrats: CHOOSE A NEW SPEAKER." projectspeaker.org forwards to kansasdeservesbetter.com/speaker/ (Squarespace domain forwarding, 302, `@` and `www`).
 
 - **The record:** eight items, each with its source and his own explanation. Money comes from FEC filings, votes from clerk.house.gov, quotes from the outlet that published them.
