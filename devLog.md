@@ -336,3 +336,19 @@ Medicare for All (item 7) and the GENIUS Act (item 8) join the record, both chec
 ## 2026-11-07 — Project Speaker split into its own repo
 
 America Deserves a Speaker now lives in mbdxkc/projectspeaker, with the page at the root and every address on projectspeaker.org; it answers at https://mbdxkc.github.io/projectspeaker/ until DNS moves. This repo's `speaker/` is frozen for content and stays live only because projectspeaker.org still forwards here. The cutover order (forwarding rules out, GitHub Pages records in, CNAME, Enforce HTTPS, then `speaker/` out of this repo with a plain link from the home page) is in projectspeaker/CLAUDE.md. Both repos' hourly workflows run until then.
+
+---
+
+## 2026-11-07 — Project Speaker leaves; speaker/ removed
+
+projectspeaker.org now serves mbdxkc/projectspeaker directly over HTTPS (Let's Encrypt certificate approved and Enforce HTTPS on at 4:27 p.m.; http, www and https-www all 301 to https://projectspeaker.org/). With the new site live, this repo dropped its copy:
+
+- Deleted `speaker/`, `tools/og-speaker.html`, `tools/petition.py`, `tools/reps.py` and `.github/workflows/petition.yml`, which only ever served `speaker/`. The hourly bot now commits to projectspeaker instead, so this repo no longer needs a pull before every push
+- Cut the `speaker` section from `style.css` (144 lines) and the speaker stamping and terser step from `tools/build.sh`, which builds and stamps the home stylesheet alone again. The home page renders pixel-identical at 1280 and 600 px against HEAD; its `.call` class is a race label, and the deleted `.call-*` rules never matched it
+- The home page's `.next` line now links to https://projectspeaker.org/, in the template and in `index.html` together, and `/speaker/` left the sitemap
+- No redirect from `/speaker/`. The path lived for less than a day and the clean-voice rule bars automatic redirects; it 404s
+
+### Mistakes → Rules
+
+- **Do not save a custom domain in GitHub Pages until DNS already points at GitHub.** Saving first let GitHub's checker cache Squarespace's 4-hour-TTL records, and removing and re-adding the domain did not clear it: "improperly configured" and no certificate for about four hours while every nameserver and public resolver already answered correctly. Point DNS, confirm at the authoritative nameservers, then save the domain
+- **`git rm` reporting "local modifications" in an iCloud-synced repo can be stale stat data, not edits.** `git diff` showed nothing; `git update-index --refresh` cleared it. Check the diff before reaching for `-f`, which would have discarded real work had there been any
