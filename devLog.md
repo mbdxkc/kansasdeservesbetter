@@ -279,3 +279,32 @@ Counts come from the JSON NBC News embeds in each race page, including its call 
 - **Read a results page's data, not a summary of its page.** The readable text of NBC's pages showed no call on Senate or the House. The embedded `callStatusCode` showed four projected, one with no call and three too early. A call is a field, so read the field
 - **A results page goes stale on a clock.** Each count carries its as-of time and "unofficial," and only sourced calls get marked as won. A leader in a close race is not a winner
 - **Moving a page moves everything its relative paths assumed.** The frozen stylesheet's font URL resolves against the stylesheet, so copying it into `2026/` needed `../fonts/` even though the page's own links had already been fixed
+
+## 2026-11-07 — Project Speaker at /speaker/
+
+A new page backing the change.org petition "House Democrats: CHOOSE A NEW SPEAKER" (Nicole Whitted, 979,423 signatures at first check). Working name Project Speaker; projectspeaker.org is bought, DNS not set, so canonical, og:url and the sitemap stay on this domain. Headline "Earmarked." after "Open the gavel" read too soft, and "No gavel for AIPAC" was declined: the money is donors' earmarks through AIPAC's PAC, and the line claimed control the filings do not show.
+
+The record, six items, each checked against its primary source or publishing outlet: $421,395.99 earmarked through AIPAC PAC (C00797670) to Jeffries for Congress, the Jeffries Victory Fund and the Jeffries Battleground Protection Fund, Feb. 27, 2025 to Sept. 23, 2026, summed from 72 FEC schedule B rows, $149,300 of it from one donor on May 20, 2026 (no donor names on the page); his no on the Massie amendment, roll call 243, beside his July 14 Dear Colleague; the Nov. 4 "get even" quote (FOX 5 DC); the Oct. 24, 2025 Mamdani endorsement (AP); "exactly the right outcome" on the Cuellar pardon (The Hill); Team Blue PAC, June 2021 (NBC News).
+
+The hero rotates ten headlines, each paired with a caption and a link to its record item, every 6 seconds with a full fade-out before the next fades in. "Earmarked." opens each cycle and the other nine are shuffled. Pause button, hover and focus hold, reduced motion stays still, screen readers hear line 1 only. `rotor.js` enlarges one-line headlines to fill the two-line box by binary search against the column width. Colours scoped to `body.speaker`: House navy, Capitol gold, Democratic blue, header untouched. The signature count updates hourly: `.github/workflows/petition.yml` runs `tools/petition.py`, which rewrites the line between the petition markers only when the count moves. Firefox Developer Edition at 390, 768 and 1280: no horizontal overflow, headline, caption and link always in step, hero height constant across all ten.
+
+### Mistakes → Rules
+
+- **A secondary source's vote arithmetic is a lead, not a fact.** Newsweek said "more than half of House Democrats" voted for the Massie amendment. Roll call 243 says 103 yes, 98 no, 10 present: more for than against, not a majority of the caucus. Read the roll call before repeating a split
+- **Joint fundraising committees named for a member raise for others too.** Two of the three AIPAC-earmark recipients split with the DCCC and about 25 frontline members. Read the FEC committee's joint-committee list before writing "to his campaign"
+- **A grid item grows with its text, so its own width cannot report overflow.** The first fit check compared each headline to itself and passed while "Earmarked." pushed a 390px screen to 446px. Measure against the column, and cap the track with `minmax(0, 1fr)`
+- **A test that sets state directly skips the code that keeps that state consistent.** Forcing `.is-on` onto headlines to measure heights produced screenshots with mismatched captions, which looked like a pairing bug. Drive the real code path, or say which steps the test skipped
+- **AP time has no :00.** The first scripted stamp read "3:00 a.m."; `ap_time` now writes "3 a.m.," "noon" and "midnight"
+- **The FEC DEMO_KEY allows 40 calls an hour.** A research pass spends it fast; a free api.data.gov key raises it to 1,000. The campaign's own PAC totals for Jeffries are still to pull
+
+### Later: fact-check of the petition, Call your representative
+
+Every claim on the change.org page was checked. True and now on the page: the speaker is next in line after the vice president (3 U.S.C. § 19); in all 16 speaker ballots since 2023 no House Democrat voted for anyone but Jeffries (clerk XML, ballot by ballot). Reported, not confirmed: the Nov. 18 caucus vote (ABC News, Bloomberg Government; Fox News said mid-December), so it runs attributed with the conflict noted. The petition's opinion lines stay hers.
+
+"Call your representative" is its own section after the hero: the Kansas-only Sharice Davids line is gone, replaced by a location lookup that turns the button into "Call Rep. Name" for any district. Five cases tested in Firefox with a stubbed location and the real Census and member data: Democrat, Republican, D.C. delegate, abroad, refused.
+
+### Mistakes → Rules
+
+- **The Census geocoder's "Current" vintage already carries the next Congress's districts.** `Current_Current` answered with 120th (2026) lines while every member list on file is the 119th. In redrawn states that names the wrong person. Match the district vintage to the membership list
+- **`display` set by a class beats the `hidden` attribute.** `.cta { display: inline-block }` kept a hidden button on screen after the lookup. Any page that toggles `hidden` on a styled element needs `[hidden] { display: none !important }`
+- **A same-URL navigation that differs only in `#hash` does not reload the page.** Four of five test cases first reported the first case's result. Give each test load a unique query string

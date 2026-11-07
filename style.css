@@ -124,6 +124,134 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; t
 .record p { max-width: 42rem; margin: 0 0 1.5rem; }
 .lang { display: inline-block; padding: .65rem 0; color: var(--text); }  /* 44px tap target */
 
+/* ----------------------------------------------------------------- speaker */
+/*
+  Project Speaker, speaker/index.html. Everything below applies only there:
+  the page's <body class="speaker"> scopes it, so the results home page that
+  shares this stylesheet is untouched.
+*/
+
+/* The record: one numbered entry per claim. The number comes from a CSS
+   counter (01-06), so reordering the list renumbers it. The 1px gap over a
+   --line background draws the rules between entries. Two columns from 900px. */
+.ledger { list-style: none; counter-reset: led; margin: 0; padding: 0; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+@media (min-width: 900px) { .ledger { grid-template-columns: 1fr 1fr; } }
+.ledger > li { counter-increment: led; background: var(--bg); padding: 1.25rem; min-width: 0; }
+.ledger > li::before { content: counter(led, decimal-leading-zero); display: block; font: 700 .95rem/1 var(--display); letter-spacing: .08em; color: var(--accent); margin-bottom: .5rem; }
+.ledger h3 { font-size: clamp(1.4rem, 4vw, 1.75rem); margin-bottom: .6rem; }
+.ledger p { margin: 0 0 .75rem; max-width: 40rem; }
+/* .note holds his own explanation, set apart by a rule on the left */
+.ledger .note { color: var(--muted); border-left: 3px solid var(--line); padding-left: .75rem; }
+.ledger .src { margin: 0; }
+
+/* "Ask for a choice": the two key dates, then the three numbered steps */
+.dates { list-style: none; margin: 1.5rem 0; padding: 0; max-width: 42rem; border-top: 1px solid var(--line); }
+.dates li { padding: .75rem 0; border-bottom: 1px solid var(--line); }
+.dates strong { display: block; font: 700 1.25rem/1.1 var(--display); text-transform: uppercase; letter-spacing: .04em; color: var(--accent); margin-bottom: .25rem; }
+.steps { margin: 0 0 1.75rem; padding-left: 1.25rem; max-width: 42rem; }
+.steps li { margin-bottom: .75rem; }
+
+/*
+  Colours: House navy ground, Capitol gold accents, Democratic blue buttons.
+  The palette is set on main and the footer only, so the shared header keeps
+  the site's black and sunflower. Contrast on the navy: text 15.4:1, muted
+  9.6:1, gold 9.0:1, links 10.1:1; white on the blue button 7.2:1. The blue
+  button itself is only 2.4:1 against the navy, so it carries a light border
+  to read as a button.
+*/
+body.speaker { background: #0d1b33; }
+.speaker main, .speaker .site-footer {
+  --bg: #0d1b33;      /* House navy */
+  --line: #2a3d5e;    /* rules and borders */
+  --text: #f5f2ea;    /* ivory */
+  --muted: #b8c2d3;
+  --accent: #d8b86a;  /* Capitol gold */
+  --link: #a9c8ff;
+  --dem: #1f4fbf;     /* Democratic blue */
+  color: var(--text);
+}
+.speaker main a:not(.cta) { color: var(--link); }
+.speaker .src a { color: var(--muted); }
+.speaker .src a:hover, .speaker main a:not(.cta):hover { color: var(--text); }
+.speaker .cta { background: var(--dem); color: #fff; border: 1px solid rgba(255, 255, 255, .6); border-radius: 999px; padding: 1rem 1.75rem; }
+/* Hero button and its live signature count, kept together as one unit with
+   one clear gap above. Side by side when there is room, stacked on phones. */
+.speaker .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; margin-top: 2rem; }
+.speaker .cta-row .cta { margin: 0; }
+.speaker .cta-row .src { margin: 0; max-width: 34rem; }
+.speaker .cta:hover { background: #fff; color: var(--bg); }
+.speaker .ledger .note { border-left-color: var(--accent); }
+
+/*
+  Hero rotor (driven by speaker/rotor.js).
+  All ten headlines sit in one grid cell, stacked on top of each other, and
+  so do all ten captions. A grid cell is as tall as its tallest item, so the
+  hero keeps one height whichever line is showing and nothing below it moves.
+  minmax(0, 1fr) caps the column at the page width; without it the cell grows
+  to fit its widest text and the page scrolls sideways on phones.
+  Only the line with .is-on is visible. The h1 size here is the starting
+  size; rotor.js then enlarges one-line headlines to fill the same box.
+*/
+.speaker .hero h1 { color: var(--text); font-size: clamp(2.5rem, min(10vw, 12vh), 6.5rem); line-height: 1; }
+.rotor, .rotor-cap { display: grid; grid-template-columns: minmax(0, 1fr); }
+/* The swap: the old line fades out and drops slightly, the new one fades in
+   and rises into place. .5s must match CONFIG.fade in rotor.js, which waits
+   for the fade-out to finish before showing the next line. */
+.rotor > .rotor-line, .rotor-cap > .rotor-line { grid-area: 1 / 1; opacity: 0; transform: translateY(.35rem);
+  transition: opacity .5s ease, transform .5s ease; }
+.rotor > .rotor-line.is-on, .rotor-cap > .rotor-line.is-on { opacity: 1; transform: none; }
+.rotor-cap > .rotor-line.is-on { transition-delay: .08s; }  /* the caption arrives a beat after the headline */
+
+/* "From the record: item 0N" link and the Pause button, on one row */
+.rotor-ref { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; margin: 0 0 1.25rem;
+  font: 500 .9rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .08em; }
+/* padding makes a 44px tap target; .is-out fades the link with the headline */
+.speaker main .rotor-ref a { color: var(--accent); display: inline-block; padding: .75rem 0; transition: opacity .5s ease; }
+.speaker main .rotor-ref a.is-out { opacity: 0; }
+.rotor-pause { min-height: 44px; padding: 0 1rem; border: 1px solid var(--line); border-radius: 999px; background: none;
+  color: var(--muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+.rotor-pause:hover { color: var(--text); border-color: var(--muted); }
+
+/* Header on narrow phones: "America Deserves Better" plus "Sign the petition"
+   needs about 364px, wider than a 320-360px screen, so below 400px the nav
+   link shows only "Sign". " the petition" is hidden visually, not removed,
+   so the link is still announced (and voice-controllable) as "Sign the petition". */
+@media (max-width: 399px) {
+  .speaker .nav-long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+/*
+  "Call your representative" (#call), right after the hero and driven by
+  speaker/rep.js. A lighter navy band sets it apart as the page's main
+  action. On #132a52: text 13.3:1, muted 8.3:1, gold 7.8:1,
+  links 8.8:1.
+*/
+.speaker .call { background: #132a52; }
+/* hidden must win over the button styles: .cta sets display, which would
+   otherwise keep a hidden button (#rep-find after a lookup) on screen */
+.speaker [hidden] { display: none !important; }
+.call-lede { font-size: 1.15rem; max-width: 42rem; margin: 0 0 1.5rem; }
+.call #rep-find { margin: 0 0 1.5rem; }
+.call #rep-find:disabled { opacity: .7; cursor: progress; }
+.call-alt, .call .src { max-width: 42rem; }
+.call-alt { margin: 0 0 .75rem; }
+/* the result card rep.js fills in */
+.rep-out { max-width: 42rem; margin: 0 0 1.75rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: 6px; background: rgba(13, 27, 51, .55); }
+.rep-out p { margin: 0 0 .75rem; }
+.rep-out p:last-child { margin-bottom: 0; }
+.rep-kicker { font: 500 .9rem/1.2 var(--display); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.rep-out .rep-name { font: 700 clamp(1.6rem, 6vw, 2.4rem)/1.05 var(--display); text-transform: uppercase; margin-bottom: .35rem; }
+.rep-where, .rep-msg { color: var(--muted); }
+.rep-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.25rem; }
+.speaker .rep-actions .cta { margin: 0; }
+.rep-phone { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+/* The context line under the rotor that never changes */
+.speaker .lede-fixed { font-size: 1.05rem; color: var(--muted); margin-top: 0; }
+
+/* Reduced motion: rotor.js never rotates, and no line animates in */
+@media (prefers-reduced-motion: reduce) { .rotor > .rotor-line, .rotor-cap > .rotor-line { transition: none; transform: none; } }
+
 /* ----------------------------------------------------------------- footer */
 .site-footer { padding: 2.5rem 0 3rem; color: var(--muted); font-size: .9rem; text-align: center; }
 .site-footer p { margin: 0 auto .6rem; max-width: 46rem; }
