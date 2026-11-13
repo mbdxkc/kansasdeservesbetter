@@ -38,8 +38,8 @@ RACES = [
     ("Constitutional amendment", "kansas-ballot-measures"),
 ]
 WIBW_RACES = {
-    "State treasurer": (98.6, [("Steven Johnson, Republican", 554651), ("Juan C. Luengo, Democrat", 480006), ("Eric Lund, Libertarian", 49122)]),
-    "Insurance commissioner": (98.6, [("Daniel Hawkins, Republican", 530826), ("Dinah Sykes, Democrat", 513483), ("Ric Koehn, Libertarian", 38791)]),
+    "State treasurer": (98.8, [("Steven Johnson, Republican", 555504), ("Juan C. Luengo, Democrat", 480490), ("Eric Lund, Libertarian", 49223)]),
+    "Insurance commissioner": (98.8, [("Daniel Hawkins, Republican", 531675), ("Dinah Sykes, Democrat", 513991), ("Ric Koehn, Libertarian", 38879)]),
 }
 
 # Race -> winner's displayed name, call text, source name, source URL. Only a call a source has reported.
