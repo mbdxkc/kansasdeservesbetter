@@ -352,3 +352,15 @@ projectspeaker.org now serves mbdxkc/projectspeaker directly over HTTPS (Let's E
 
 - **Do not save a custom domain in GitHub Pages until DNS already points at GitHub.** Saving first let GitHub's checker cache Squarespace's 4-hour-TTL records, and removing and re-adding the domain did not clear it: "improperly configured" and no certificate for about four hours while every nameserver and public resolver already answered correctly. Point DNS, confirm at the authoritative nameservers, then save the domain
 - **`git rm` reporting "local modifications" in an iCloud-synced repo can be stale stat data, not edits.** `git diff` showed nothing; `git update-index --refresh` cleared it. Check the diff before reaching for `-f`, which would have discarded real work had there been any
+
+---
+
+## 2026-11-12 — Governor called for Holscher
+
+NBC News projected the governor's race for Cindy Holscher and KC Ohaebosim (D), 552,076 to 544,791 with 98.1% of the expected vote in. `tools/results.py` picked up the call from NBC's `callStatusCode` (`P`) with no code change; the race card now reads "NBC News projects: Cindy Holscher and KC Ohaebosim" with the winner's row marked. All counts refreshed to 6:45 p.m. Central, Nov. 12. Treasurer and insurance commissioner, which NBC does not carry, were retyped from WIBW at 98.8% reporting; Johnson and Hawkins still lead and keep their KWCH and WIBW calls. Secretary of state stays "Too early to call": Proctor leads Day by 9,190 with 98.7% in. Confirmed live by polling the served page for the call text (about 50 seconds after push) and both as-of lines.
+
+### Mistakes → Rules
+
+- **Running `results.py` refreshes only what NBC carries.** The two WIBW races are typed constants, so every refresh that skips WIBW publishes a fresh as-of time over day-old counts for those two. Retype them from WIBW on every run, before the script, not after
+
+**Commit:** `6f9e3e4`, pushed
